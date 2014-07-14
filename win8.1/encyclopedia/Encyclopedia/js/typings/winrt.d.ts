@@ -7908,7 +7908,7 @@ declare module Windows {
                 maxMessageSize: number;
                 messageType: Windows.Networking.Sockets.SocketMessageType;
             }
-            export interface IMessageWebSocket extends Windows.Networking.Sockets.IWebSocket, Windows.Foundation.IClosable {
+            export interface IMessageWebSocket extends Windows.Networking.Sockets.IWebSocket {
                 control: Windows.Networking.Sockets.MessageWebSocketControl;
                 information: Windows.Networking.Sockets.MessageWebSocketInformation;
                 onmessagereceived: any/* TODO */;
@@ -7946,7 +7946,7 @@ declare module Windows {
             export interface IStreamWebSocketControl extends Windows.Networking.Sockets.IWebSocketControl {
                 noDelay: boolean;
             }
-            export interface IStreamWebSocket extends Windows.Networking.Sockets.IWebSocket, Windows.Foundation.IClosable {
+            export interface IStreamWebSocket extends Windows.Networking.Sockets.IWebSocket {
                 control: Windows.Networking.Sockets.StreamWebSocketControl;
                 information: Windows.Networking.Sockets.StreamWebSocketInformation;
                 inputStream: Windows.Storage.Streams.IInputStream;
