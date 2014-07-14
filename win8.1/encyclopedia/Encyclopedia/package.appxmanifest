@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Identity Name="55019TS.Encyclopedia" Version="1.1.0.5" Publisher="CN=2D965ED7-3EF5-4803-AEC3-26E173EE9D03" />
+  <Properties>
+    <DisplayName>Encyclopedia</DisplayName>
+    <Description>Encyclopedia</Description>
+    <PublisherDisplayName>TS</PublisherDisplayName>
+    <Logo>images\ep-storelogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="en-US" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="default.html">
+      <Extensions>
+        <Extension Category="windows.search" StartPage="default.html" />
+      </Extensions>
+      <m2:VisualElements DisplayName="Encyclopedia" Description="Encyclopedia" BackgroundColor="#0084FF" ForegroundText="light" ToastCapable="false" Square150x150Logo="images\ep-logo.png" Square30x30Logo="images\ep-logo-small.png">
+        <m2:DefaultTile Wide310x150Logo="images\ep-widetile.png">
+          <m2:ShowNameOnTiles>
+            <m2:ShowOn Tile="square150x150Logo" />
+            <m2:ShowOn Tile="wide310x150Logo" />
+          </m2:ShowNameOnTiles>
+        </m2:DefaultTile>
+        <m2:SplashScreen BackgroundColor="#FFFFFF" Image="images\ep-splashscreen.png" />
+      </m2:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <DeviceCapability Name="location" />
+  </Capabilities>
+</Package>

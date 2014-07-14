@@ -1,8 +1,8 @@
-===== TypeScript Sample: Windows 8 Windows store app =====
+===== TypeScript Sample: Windows 8.1 Windows store app =====
 
 === Overview ===
 
-The encyclopedia includes a complete sample app for a Windows 8 app
+The encyclopedia includes a complete sample app for a Windows 8.1 app
 built using TypeScript.  The following features of TypeScript are highlighted:
 - VS project integration:  TypeScript compilation integrated into VS build
 - Typing WinJS and WinRT:  Early work on typing these libraries
@@ -10,5 +10,5 @@ built using TypeScript.  The following features of TypeScript are highlighted:
   TypeScript
 
 === Running ===
-Open encyclopedia\Encyclopedia.sln in Visual Studio 2012
+Open encyclopedia\Encyclopedia.sln in Visual Studio 2013
 F5
