@@ -5,5 +5,5 @@
 This sample shows basic class definition and instantiation.
 
 === Running ===
-tsc greeter.ts
+tsc --sourcemap greeter.ts
 start greeter.html

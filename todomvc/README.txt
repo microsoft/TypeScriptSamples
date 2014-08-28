@@ -10,7 +10,7 @@ TypeScript integration points are highlighted:
 
 
 === Running ===
-tsc js\todos.ts
+tsc --sourcemap js\todos.ts
 start index.html
 
 === Caveats ===

@@ -9,5 +9,5 @@ This sample shows a simple jQuery application in TypeScript using a jQuery TypeS
 For best results, scroll the window using the scrollbar.  
 
 === Running ===
-tsc --target ES5 parallax.ts
+tsc --sourcemap --target ES5 parallax.ts
 start parallax.html

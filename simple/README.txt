@@ -8,4 +8,4 @@ Simple use of classes and inheritance:
 
 
 === Running ===
-tsc animals.ts
+tsc --sourcemap animals.ts
