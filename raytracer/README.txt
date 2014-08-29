@@ -5,5 +5,5 @@
 This sample shows a raytracer implementation in TypeScript.
 
 === Running ===
-tsc raytracer.ts
+tsc --sourcemap raytracer.ts
 start raytracer.html

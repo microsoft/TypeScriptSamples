@@ -7,5 +7,5 @@ D3 visualization
 - Use of modules and interfaces
 
 === Running ===
-tsc data.ts
+tsc --sourcemap data.ts
 start perf.html
