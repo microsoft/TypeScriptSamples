@@ -1,9 +1,25 @@
 // Mongo
+///<reference path="./mongodb.d.ts" />
+///<reference path='../node/node.d.ts' />
+
 import mongodb = require('mongodb');
 
-var server = new mongodb.Server('localhost', 27017, {auto_reconnect: true}, {})
-var db = new mongodb.Db('mydb', server);
-db.open(function() {});
+var serverName = 'localhost'
+var serverPort = 27017;
+var dbName = 'mydb';
+
+var db: mongodb.Db;
+var server: mongodb.Server = new mongodb.Server(serverName, serverPort, {auto_reconnect: true});
+var client: mongodb.MongoClient = new mongodb.MongoClient(server, {fsync:true, native_parser:true});
+client.open((err: Error) => {
+    if (err) {
+        console.error("DATABASE CONNECT FAILED: "+err);
+        process.exit(1);
+    } else {
+        db = client.db(dbName);
+        console.info("Database connected");
+    }
+});
 
 export interface User {
     _id: string;
