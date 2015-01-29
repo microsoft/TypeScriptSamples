@@ -1,30 +1,37 @@
-///<reference path='../node/node.d.ts' />
+/// <reference path='typings/node/node.d.ts' />
+/// <reference path='typings/mongodb/mongodb.d.ts' />
+/// <reference path='typings/express/express.d.ts' />
+/// <reference path='typings/express/express-middleware.d.ts' />
+
 
 import http = require("http")
 import url = require("url")
 import routes = require("./routes/index")
 import db = require("./db")
 import express = require("express")
+import bodyParser = require("body-parser");
+import methodOverride = require("method-override");
+import errorHandler = require("errorhandler");
 
 var app = express();
 
 // Configuration
-app.configure(function(){
-  app.set('views', __dirname + '/views');
-  app.set('view engine', 'jade');
-  app.set('view options', { layout: false });
-  app.use(express.bodyParser());
-  app.use(express.methodOverride());
-  app.use(express.static(__dirname + '/public'));
-});
 
-app.configure('development', function(){
-  app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
-});
+app.set('views', __dirname + '/views');
+app.set('view engine', 'jade');
+app.set('view options', { layout: false });
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(methodOverride());
+app.use(express.static(__dirname + '/public'));
 
-app.configure('production', function(){
-  app.use(express.errorHandler());
-});
+var env = process.env.NODE_ENV || 'development';
+if (env === 'development') {
+    app.use(errorHandler({ dumpExceptions: true, showStack: true }));
+}
+else if (env === 'production') {
+    app.use(errorHandler());
+}
 
 
 // Routes
@@ -94,7 +101,7 @@ app.get('/user/:userid/:boardid', function(req, res) {
                 });
             });
         } else {
-            res.send('not found', 404);
+            res.send(404, 'not found');
         }
     });
 });

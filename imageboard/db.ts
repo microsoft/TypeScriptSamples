@@ -1,8 +1,8 @@
 // Mongo
 import mongodb = require('mongodb');
 
-var server = new mongodb.Server('localhost', 27017, {auto_reconnect: true}, {})
-var db = new mongodb.Db('mydb', server);
+var server = new mongodb.Server('localhost', 27017, {auto_reconnect: true})
+var db = new mongodb.Db('mydb', server, { w: 1 });
 db.open(function() {});
 
 export interface User {
