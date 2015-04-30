@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "emitDecoratorMetadata": true,
+        "module": "AMD",
+        "target": "es5"
+    },
+    "files": [
+        "todo.ts"
+    ]
+}
