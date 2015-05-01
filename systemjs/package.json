@@ -13,6 +13,6 @@
         "typescript": "mhegazy/typescript#v1.5-beta2"
     },
     "scripts": {
-        "start": "node node_modules/http-server/bin/http-server"
+        "browser": "node node_modules/http-server/bin/http-server -o"
     }
 }
