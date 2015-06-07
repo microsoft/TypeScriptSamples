@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Jspm sample</title>
+    <script src="jspm_packages/system.src.js"></script>
+    <script src="config.js"></script>
+</head>
+<body>
+    <div id="content"></div>
+    <script>
+        System.config({
+            "paths": {
+                "app.js":"app.ts",
+                "greeter.js":"greeter.ts"
+            }
+        });
+        System.import('app').then(function(m) {
+            var element = document.getElementById("content");
+            m.main(element);
+        });
+    </script>
+</body>
+</html>
