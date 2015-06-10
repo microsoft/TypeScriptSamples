@@ -11,8 +11,8 @@ module Mankala {
     export var NoMove = -1;
 
     const bodyId = "body";
-    const humanScoreId = "humscore";
-    const computerScoreId = "compscore"
+    const humanScoreId = "humanScore";
+    const computerScoreId = "computerScore"
 
     export interface IPositionList extends Base.IList {
         data: Position;
