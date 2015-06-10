@@ -32,10 +32,8 @@ module Mankala {
     export function testBrowser() {
         var game = new Game();
         game.interactive();
-        var bod = document.getElementById("bod");
-        bod.onresize = function() {
-            game.resize();
-        }
+        var body = <HTMLBodyElement>document.getElementById("bod");
+        body.onresize = () => { game.resize(); };
     }
 
     export class Game {
