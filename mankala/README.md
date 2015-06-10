@@ -11,9 +11,11 @@ features of TypeScript are highlighted:
 
 
 ## Running 
+
 ```
 tsc Driver.ts --sourcemap -out game.js	
 cscript game.js
 ```
-For web execution use play.htm.
+
+For web execution use play.html.
 

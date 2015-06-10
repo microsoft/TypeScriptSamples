@@ -182,7 +182,6 @@ module Mankala {
 
         public toCircleSVG(game: Game) {
             var seedDivisions = 14;
-            var bod = document.getElementById("bod");
             var board = document.createElementNS(svgNS, "svg");
             var w = window.innerWidth - 40;
             var h = window.innerHeight - 40;

@@ -10,6 +10,10 @@ module Mankala {
     export var NoScore = 31;
     export var NoMove = -1;
 
+    const bodyId = "body";
+    const humanScoreId = "humanScore";
+    const computerScoreId = "computerScore"
+
     export interface IPositionList extends Base.IList {
         data: Position;
         push(pos: Position);
@@ -32,10 +36,8 @@ module Mankala {
     export function testBrowser() {
         var game = new Game();
         game.interactive();
-        var bod = document.getElementById("bod");
-        bod.onresize = function() {
-            game.resize();
-        }
+        var body = <HTMLBodyElement>document.getElementById(bodyId);
+        body.onresize = () => { game.resize(); };
     }
 
     export class Game {
@@ -49,12 +51,12 @@ module Mankala {
 
         private features = new Features();
         private nextSeedCounts: number[] = new Array<number>(14);
-        private bod: Element;
+        private body: Element;
         private boardElm: Element = null;
 
         public resize() {
             if (this.boardElm != null) {
-                this.bod.removeChild(this.boardElm);
+                this.body.removeChild(this.boardElm);
             }
             this.showMove();
         }
@@ -79,7 +81,7 @@ module Mankala {
                 if (!this.step()) {
                     this.finish();
                 }
-                this.bod.removeChild(this.boardElm);
+                this.body.removeChild(this.boardElm);
                 this.showMove();
             }, 1000);
         }
@@ -96,15 +98,15 @@ module Mankala {
 
         private auto() {
             // initialize
-            this.bod = document.getElementById("bod");
+            this.body = document.getElementById(bodyId);
             this.showMove();
             // run with timeout
             this.setStep();
         }
 
         private showMove(): void {
-            var hsc = document.getElementById("humscore");
-            var csc = document.getElementById("compscore");
+            var hsc = document.getElementById(humanScoreId);
+            var csc = document.getElementById(computerScoreId);
 
             var g = this;
             if (!this.isInteractive) {
@@ -116,7 +118,7 @@ module Mankala {
                 ((this.position.turn == 0) ? "  <-Turn" : "");
             csc.innerText = this.position.seedCounts[storeHouses[1]] +
                 ((this.position.turn == 1) ? "  <-Turn" : "");
-            this.bod.appendChild(this.boardElm);
+            this.body.appendChild(this.boardElm);
         }
 
         public humanMove(seed: number) {
@@ -125,7 +127,7 @@ module Mankala {
                 this.position = new DisplayPosition(this.nextSeedCounts.slice(0), NoMove,
                                              this.features.turnContinues ? this.position.turn : 1 - this.position.turn);
                 this.position.config = this.prevConfig;
-                this.bod.removeChild(this.boardElm);
+                this.body.removeChild(this.boardElm);
                 this.showMove();
                 if (this.position.turn == 1) {
                     this.setStep();
@@ -135,7 +137,7 @@ module Mankala {
 
         public interactive() {
             this.isInteractive = true;
-            this.bod = document.getElementById("bod");
+            this.body = document.getElementById(bodyId);
             this.showMove();
         }
 
