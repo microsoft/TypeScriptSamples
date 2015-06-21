@@ -8,7 +8,7 @@ describe('myApp.view2 module', function() {
 
     it('should ....', inject(function($controller) {
       //spec body
-      var view2Ctrl:View2Ctrl = $controller('View2Ctrl');
+      var view2Ctrl:View2Controller = $controller('View2Ctrl');
       expect(view2Ctrl).toBeDefined();
     }));
 

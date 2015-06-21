@@ -1,9 +1,9 @@
 'use strict';
 
-class View2Ctrl{
+class View2Controller{
     static $inject = [];
     constructor(){
-        
+
     }
 }
 
@@ -16,4 +16,4 @@ angular.module('myApp.view2', ['ngRoute'])
   });
 }])
 
-.controller('View2Ctrl', View2Ctrl);
+.controller('View2Ctrl', View2Controller);
