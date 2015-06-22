@@ -2,11 +2,12 @@
 * text=auto
 
 # Custom
-*.ts     text
-*.jade   text
-*.md     text
-*.js     text
-*.cmd    text eol=crlf
-*.sln    text eol=crlf
-*.csproj text eol=crlf
-*.jsproj text eol=crlf
+*.ts      text
+*.jade    text
+*.md      text
+*.js      text
+*.cmd     text eol=crlf
+*.sln     text eol=crlf
+*.csproj  text eol=crlf
+*.jsproj  text eol=crlf
+*.njsproj text eol=crlf
