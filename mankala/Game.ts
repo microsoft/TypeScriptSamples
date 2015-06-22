@@ -14,7 +14,7 @@ namespace Mankala {
     const humanScoreId = "humanScore";
     const computerScoreId = "computerScore"
 
-    export interface IPositionList extends Base.IList {
+    export interface IPositionList extends Base.IList<Position> {
         data: Position;
         push(pos: Position);
         pop(): Position;
@@ -25,7 +25,7 @@ namespace Mankala {
     }
 
     function popPosition(l: IPositionList) {
-        var entry: IPositionList = <IPositionList>Base.listRemove(l.next);
+        var entry = Base.listRemove(l.next);
         if (entry != null) {
             return entry.data;
         } else {
@@ -165,7 +165,7 @@ namespace Mankala {
 
         private findMove() {
             var timeStart = new Date().getTime();
-            this.q = <IPositionList>Base.listMakeHead();
+            this.q = <IPositionList>Base.listMakeHead<Position>();
             this.scores = [NoScore, NoScore, NoScore, NoScore, NoScore, NoScore];
             pushPosition(this.position, this.q);
             var deltaTime = 0;
