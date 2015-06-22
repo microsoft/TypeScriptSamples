@@ -1,6 +1,6 @@
 ///<reference path="Driver.ts"/>
 
-module Mankala {
+namespace Mankala {
     export var storeHouses = [6, 13];
     var svgNS = "http://www.w3.org/2000/svg";
 

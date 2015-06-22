@@ -1,6 +1,6 @@
 ///<reference path="Driver.ts"/>
 
-module Base {
+namespace Base {
     export interface IList {
         isHead: boolean;
         next: IList;
