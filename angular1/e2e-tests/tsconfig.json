@@ -1,0 +1,34 @@
+{
+    "filesGlob": [
+        "../app/**/*.ts",
+        "!../app/typings/**/*.ts",
+        "./**/*.ts",
+        "./typings/**/*.ts"
+    ],
+    "compilerOptions": {
+        "module": "commonjs"
+    },
+    "files": [
+        "../app/app.ts",
+        "../app/components/version/interpolate-filter.ts",
+        "../app/components/version/interpolate-filter_test.ts",
+        "../app/components/version/version-directive.ts",
+        "../app/components/version/version-directive_test.ts",
+        "../app/components/version/version.ts",
+        "../app/components/version/version_test.ts",
+        "../app/view1/view1.ts",
+        "../app/view1/view1_test.ts",
+        "../app/view2/view2.ts",
+        "../app/view2/view2_test.ts",
+        "./protractor.conf.ts",
+        "./scenarios.ts",
+        "./typings/angular-protractor/angular-protractor.d.ts",
+        "./typings/angularjs/angular-mocks.d.ts",
+        "./typings/angularjs/angular.d.ts",
+        "./typings/jasmine/jasmine.d.ts",
+        "./typings/jquery/jquery.d.ts",
+        "./typings/karma-jasmine/karma-jasmine.d.ts",
+        "./typings/selenium-webdriver/selenium-webdriver.d.ts",
+        "./typings/tsd.d.ts"
+    ]
+}
