@@ -8,7 +8,6 @@ namespace Base {
         data: T;
         insertAfter(entry: IList<T>): IList<T>;
         insertBefore(entry: IList<T>): IList<T>;
-        item();
         empty(): boolean;
     }
 
@@ -17,10 +16,6 @@ namespace Base {
         prev: IList<T>;
 
         constructor(public isHead: boolean, public data: T) { }
-
-        item() {
-            return this.data;
-        }
 
         empty(): boolean {
             return this.next == this;
