@@ -18,9 +18,9 @@ tsc --watch --p app
 tsc --watch --p e2e-tests
 ```
 
-That's it. You have typescript setup and ready to go. You can follow the steps of JavaScript ([README-JS](./README-JS.md)) from this point on in a new window starting at the install dependencies section.
+That's it. You have typescript setup and ready to go. Now you can follow the standard steps of the original Angular-Seed JavaScript project in a new window using [README-JS](./README-JS.md) starting at the [install dependencies](./README-JS.md#install-dependencies) section.
 
-**TIP**: *Abbriged the remaining JS steps for a quick start:*
+**TIP**: *Abriged the remaining JS steps for a quick start:*
 ```bash
 npm install
 npm start
