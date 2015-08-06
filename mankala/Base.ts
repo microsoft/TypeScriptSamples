@@ -1,31 +1,27 @@
 ///<reference path="Driver.ts"/>
 
-module Base {
-    export interface IList {
+namespace Base {
+    export interface IList<T> {
         isHead: boolean;
-        next: IList;
-        prev: IList;
-        insertAfter(entry: IList): IList;
-        insertBefore(entry: IList): IList;
-        item();
+        next: IList<T>;
+        prev: IList<T>;
+        data: T;
+        insertAfter(entry: IList<T>): IList<T>;
+        insertBefore(entry: IList<T>): IList<T>;
         empty(): boolean;
     }
 
-    export class List implements IList {
-        next: IList;
-        prev: IList;
-        
-        constructor (public isHead: boolean, public data) { }
+    export class List<T> implements IList<T> {
+        next: IList<T>;
+        prev: IList<T>;
 
-        item() {
-            return this.data;
-        }
+        constructor(public isHead: boolean, public data: T) { }
 
         empty(): boolean {
             return this.next == this;
         }
 
-        insertAfter(entry: IList): IList {
+        insertAfter(entry: IList<T>): IList<T> {
             entry.next = this.next;
             entry.prev = this;
             this.next = entry;
@@ -33,7 +29,7 @@ module Base {
             return (entry);
         }
 
-        insertBefore(entry: IList): IList {
+        insertBefore(entry: IList<T>): IList<T> {
             this.prev.next = entry;
             entry.next = this;
             entry.prev = this.prev;
@@ -42,21 +38,21 @@ module Base {
         }
     }
 
-    export function listMakeEntry(data): IList {
-        var entry: List = new List(false, data);
+    export function listMakeEntry<T>(data: T): IList<T> {
+        var entry: List<T> = new List<T>(false, data);
         entry.prev = entry;
         entry.next = entry;
         return entry;
     }
 
-    export function listMakeHead(): IList {
-        var entry: List = new List(true, null);
+    export function listMakeHead<T>(): IList<T> {
+        var entry: List<T> = new List(true, null);
         entry.prev = entry;
         entry.next = entry;
         return entry;
     }
 
-    export function listRemove(entry: IList): IList {
+    export function listRemove<T>(entry: IList<T>): IList<T> {
         if (entry == null) {
             return null;
         }

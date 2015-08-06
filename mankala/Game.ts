@@ -1,6 +1,6 @@
 ///<reference path="Driver.ts"/>
 
-module Mankala {
+namespace Mankala {
     export var NoSpace = -1;
     export var homeSpaces = [[0, 1, 2, 3, 4, 5],
                              [7, 8, 9, 10, 11, 12]];
@@ -14,18 +14,12 @@ module Mankala {
     const humanScoreId = "humanScore";
     const computerScoreId = "computerScore"
 
-    export interface IPositionList extends Base.IList {
-        data: Position;
-        push(pos: Position);
-        pop(): Position;
-    }
-
-    function pushPosition(pos: Position, l: IPositionList) {
+    function pushPosition(pos: Position, l: Base.IList<Position>) {
         l.insertAfter(Base.listMakeEntry(pos));
     }
 
-    function popPosition(l: IPositionList) {
-        var entry: IPositionList = <IPositionList>Base.listRemove(l.next);
+    function popPosition(l: Base.IList<Position>) {
+        var entry = Base.listRemove(l.next);
         if (entry != null) {
             return entry.data;
         } else {
@@ -43,7 +37,7 @@ module Mankala {
     export class Game {
         private position = new DisplayPosition([3, 3, 3, 3, 3, 3, 0, 3, 3, 3, 3, 3, 3, 0], NoMove, 0);
         private prevConfig: SeedCoords[][];
-        private q: IPositionList = null;
+        private q: Base.IList<Position> = null;
         private scores: number[] = null;
         private positionCount = 0;
         private moveCount = 0;
@@ -165,7 +159,7 @@ module Mankala {
 
         private findMove() {
             var timeStart = new Date().getTime();
-            this.q = <IPositionList>Base.listMakeHead();
+            this.q = Base.listMakeHead<Position>();
             this.scores = [NoScore, NoScore, NoScore, NoScore, NoScore, NoScore];
             pushPosition(this.position, this.q);
             var deltaTime = 0;
