@@ -1,3 +1,5 @@
+import repeat from "core-js/library/fn/string/repeat"
+
 export class Greeter
 {
     element: HTMLElement;
@@ -15,7 +17,7 @@ export class Greeter
 
     start()
     {
-        this.timerToken = setInterval(() => this.span.innerText = new Date().toUTCString(), 500);
+        this.timerToken = setInterval(() => this.span.innerText =  `"${repeat(new Date().toUTCString() + " ", 2)}"`, 500);
     }
 
     stop()
