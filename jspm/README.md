@@ -1,10 +1,9 @@
-**Install and initialize jspm**
+**Setup jspm and install jspm dependencies**
 ```
 npm install -g jspm@beta
-jspm init
+jspm install
 
 ```
-Pick default answer for all questions except `Which ES6 transpiler would you like to use?`, as an answer type `typescript`.
 
 **run:**
 - install http-server package via
