@@ -7,12 +7,6 @@
 <body>
     <div id="content"></div>
     <script>
-        System.config({
-            "paths": {
-                "app.js":"app.ts",
-                "greeter.js":"greeter.ts"
-            }
-        });
         System.import('app').then(function(m) {
             var element = document.getElementById("content");
             m.main(element);
