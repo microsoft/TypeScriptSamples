@@ -7,12 +7,13 @@
         "url": "https://github.com/Microsoft/TypeScriptSamples.git"
     },
     "dependencies": {
-        "http-server": "0.8.0"
+        "http-server": "0.8.0",
+        "systemjs": "0.18.0"
     },
     "devDependencies": {
-        "typescript": "mhegazy/typescript#v1.5-beta2"
+        "typescript": "^1.5.3"
     },
     "scripts": {
-        "browser": "node node_modules/http-server/bin/http-server -o"
+        "start": "node node_modules/http-server/bin/http-server -o"
     }
 }
