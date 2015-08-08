@@ -10,10 +10,10 @@
         "http-server": "0.8.0"
     },
     "devDependencies": {
-        "typescript": "mhegazy/typescript#v1.5-beta2"
+        "typescript": "^1.5.3"
     },
     "scripts": {
-        "browser": "node node_modules/typescript/bin/tsc.js && node node_modules/http-server/bin/http-server browser -o",
+        "browser": "node node_modules/typescript/bin/tsc.js && node node_modules/http-server/bin/http-server -o",
         "node": "node node_modules/typescript/bin/tsc.js && node node/app.js"
     }
 }
