@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "module": "UMD",
+        "target": "es5"
+    },
+    "files": [
+        "shared/timeReporter.ts",
+        "browser/app.ts",
+        "node/os.d.ts",
+        "node/app.ts"
+    ]
+}
