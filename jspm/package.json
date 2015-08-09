@@ -5,7 +5,7 @@
       "core-js": "npm:core-js@^0.9.4"
     },
     "devDependencies": {
-      "typescript": "github:mhegazy/typescript@v1.5-beta2"
+      "typescript": "npm:typescript"
     }
   }
 }
