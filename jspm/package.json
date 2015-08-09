@@ -1,0 +1,11 @@
+{
+  "jspm": {
+    "directories": {},
+    "dependencies": {
+      "core-js": "npm:core-js@^0.9.4"
+    },
+    "devDependencies": {
+      "typescript": "npm:typescript"
+    }
+  }
+}
