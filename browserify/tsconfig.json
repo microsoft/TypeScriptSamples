@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        "target": "es5"
+    },
+    "files": [
+        "src/node.d.ts",
+        "src/timeReporter.ts",
+        "src/app.ts"
+    ]
+}
