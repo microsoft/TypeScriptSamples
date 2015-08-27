@@ -9,7 +9,7 @@ System.config({
     "npm:*": "jspm_packages/npm/*"
   },
   "packages": {
-    "src": {
+    "/src": {
       "defaultExtension": "ts"
     }
   }
