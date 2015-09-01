@@ -1,6 +1,7 @@
 **Setup jspm and install jspm dependencies**
 ```
 npm install -g jspm@beta
+jspm dl-loader --edge
 jspm install
 
 ```
