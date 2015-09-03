@@ -1,5 +1,5 @@
-import React = require('react');
-import $ = require('jquery');
+import * as React from 'react';
+import * as $ from 'jquery';
 import {Greeter as Greetifier, GreeterProps as GreeterProps} from 'greeter';
 
 function getRandomGreeting() {

@@ -1,4 +1,4 @@
-import React = require('react');
+import * as React from 'react';
 
 export interface GreeterProps extends React.Props<Greeter> {
     whomToGreet: string;
@@ -10,9 +10,11 @@ export class Greeter extends React.Component<GreeterProps, {}> {
         let g = this.props.greeting;
 
         let greeting = 'Hello';
+
         if (typeof g === 'string') {
             greeting = g;
-        } else if (g) {
+        }
+        else if (g) {
             greeting = g();
         }
 
