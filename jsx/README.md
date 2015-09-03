@@ -8,6 +8,11 @@ A demo project for showing off JSX in TypeScript
 npm install
 ```
 
+## Update typeings
+```
+node node_modules\.bin\tsd update
+```
+
 ## Compile
 ```
 node node_modules/typescript/bin/tsc

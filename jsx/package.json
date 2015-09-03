@@ -25,7 +25,8 @@
     "homepage": "https://github.com/RyanCavanaugh/jsx-demo",
     "devDependencies": {
         "typescript": "latest",
-        "http-server": "0.8.0"
+        "http-server": "0.8.0",
+        "tsd":  "latest"
     },
     "dependencies": {
         "jquery": "^2.1.4",
