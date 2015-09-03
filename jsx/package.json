@@ -1,0 +1,35 @@
+{
+  "name": "jsx-demo",
+  "version": "0.0.1",
+  "description": "JSX in TypeScript Demo Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RyanCavanaugh/jsx-demo.git"
+  },
+  "keywords": [
+    "jsx",
+    "tsx",
+    "typescript",
+    "ts",
+    "react"
+  ],
+  "author": "Ryan Cavanaugh (Microsoft)",
+  "license": "Apache",
+  "bugs": {
+    "url": "https://github.com/RyanCavanaugh/jsx-demo/issues"
+  },
+  "homepage": "https://github.com/RyanCavanaugh/jsx-demo",
+  "devDependencies": {
+    "typescript": "latest",
+     "http-server": "0.8.0"
+  },
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "react": "^0.13.3",
+    "requirejs": "^2.1.20"
+  }
+}
