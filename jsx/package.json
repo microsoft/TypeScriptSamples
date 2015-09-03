@@ -9,7 +9,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/RyanCavanaugh/jsx-demo.git"
+        "url": "https://github.com/Microsoft/TypeScriptSamples.git"
     },
     "keywords": [
         "jsx",
@@ -21,9 +21,9 @@
     "author": "Ryan Cavanaugh (Microsoft)",
     "license": "Apache",
     "bugs": {
-        "url": "https://github.com/RyanCavanaugh/jsx-demo/issues"
+        "url": "https://github.com/Microsoft/TypeScriptSamples/issues"
     },
-    "homepage": "https://github.com/RyanCavanaugh/jsx-demo",
+    "homepage": "https://github.com/Microsoft/TypeScriptSamples",
     "devDependencies": {
         "typescript": "latest",
         "http-server": "0.8.0",
