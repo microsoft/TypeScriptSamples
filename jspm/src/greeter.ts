@@ -1,4 +1,4 @@
-import repeat from "core-js/library/fn/string/repeat"
+import repeat from "core-js/fn/string/repeat"
 
 export class Greeter
 {
@@ -17,7 +17,7 @@ export class Greeter
 
     start()
     {
-        this.timerToken = setInterval(() => this.span.innerText =  `"${repeat(new Date().toUTCString() + " ", 2)}"`, 500);
+        this.timerToken = setInterval(() => this.span.innerText =  `"${repeat(new Date().toUTCString() + " ", 2)}" `, 500);
     }
 
     stop()

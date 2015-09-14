@@ -2,7 +2,7 @@
 ```
 npm install -g jspm@beta
 jspm install
-
+jspm dl-loader --edge
 ```
 
 **run:**
