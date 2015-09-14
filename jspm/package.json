@@ -5,7 +5,7 @@
       "core-js": "npm:core-js@^0.9.4"
     },
     "devDependencies": {
-      "typescript": "npm:typescript"
+      "typescript": "npm:typescript@1.5.3"
     }
   }
 }

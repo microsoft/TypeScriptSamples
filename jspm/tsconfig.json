@@ -1,6 +1,9 @@
 {
     "compilerOptions": {
-        "module":  "system",
+        "module": "system",
         "sourceMap": true
-    }
+    },
+    "exclude": [
+        "jspm_packages"
+    ]
 }
