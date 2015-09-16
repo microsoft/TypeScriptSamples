@@ -12,11 +12,11 @@ Notable features:
 
 ## Running 
 
-Note: Perform steps 3 - 6 with your working directory set to the folder containing this README:
+Note: Perform steps 3 - 6 with your working directory set to the folder containing this README.md file:
 
 1. Install MongoDB if necessary (see http://docs.mongodb.org/manual/installation/ )
 
-2. Run the following command to launch the MongoDB process:
+2. Ensure MongoDB is running, e.g.: by launching it manually:
 `<mongoinstalldir>\bin\mongod`
 
 3. Restore the sample app data to MongoDB in another command prompt with the following command:
@@ -24,6 +24,9 @@ Note: Perform steps 3 - 6 with your working directory set to the folder containi
 
 4. Install the app's node dependencies with the following command:
 `npm install`
+
+5. After ensuring that `tsd` is available globally (`npm install -g tsd`), install the typings with the following command:
+`tsd install`
 
 5. Compile the app with the following command:
 `tsc --sourcemap --module commonjs app.ts`
