@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "test": "mocha --compilers ts:typescript-require -u exports -R spec tests/test_*.ts",
+    "test": "mocha -u exports -R spec test/test_*.js",
+    "test_ts": "mocha --compilers ts:typescript-require -u exports -R spec test/test_*.ts",
     "start": "node app.js"
   },
   "dependencies": {
