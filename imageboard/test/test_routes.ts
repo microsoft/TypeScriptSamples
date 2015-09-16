@@ -5,13 +5,24 @@
 
 import supertest = require('supertest');
 import app = require('../app');
+const request = supertest(app.App);
 
 describe('GET /', function () {
-    it('respond with json', function (done) {
-        supertest(app)
+    it('respond with HTML', function (done) {
+        request
             .get('/')
-            .set('Accept', 'application/json')
-            .expect('Content-Type', /json/)
+            .set('Accept', 'text/html; charset=utf-8')
+            .expect('Content-Type', 'text/html; charset=utf-8')
+            .expect(200, done);
+    })
+});
+
+describe('GET /findImages', function () {
+    it('respond with HTML', function (done) {
+        request
+            .get('/findImages')
+            .set('Accept', 'text/html; charset=utf-8')
+            .query({url: 'http://www.mememaker.net/static/images/memes/4269694.jpg'})
             .expect(200, done);
     })
 });

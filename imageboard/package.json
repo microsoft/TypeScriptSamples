@@ -1,6 +1,6 @@
 {
   "name": "imageboard-sample",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "test": "mocha -u exports -R spec test/test_*.js",
@@ -19,6 +19,7 @@
   "devDependencies": {
     "chai": "^3.2.0",
     "mocha": "^2.3.2",
+    "supertest": "^1.1.0",
     "typescript-require": "^0.2.9"
   }
 }

@@ -26,7 +26,7 @@ app.use(bodyParser.json());
 app.use(methodOverride(""));
 app.use(express.static(__dirname + '/public'));
 
-var env = process.env.NODE_ENV || 'development';
+const env = process.env.NODE_ENV || 'development';
 if (env === 'development') {
     app.use(errorHandler({ dumpExceptions: true, showStack: true }));
 }
@@ -50,7 +50,7 @@ app.get('/findImages', function(req, res) {
       });
       urlres.on('end', function() {
         console.log(text);
-        var re = /<img[^>]+src=[\"\']([^\'\"]+)[\"\']/g;
+        const re = /<img[^>]+src=[\"\']([^\'\"]+)[\"\']/g;
         var match, matches = [];
         while(match = re.exec(text)) {
             matches.push(match[1]);
@@ -89,7 +89,7 @@ app.post('/user/:userid/newboard', function(req, res) {
 app.get('/user/:userid/:boardid', function(req, res) {
     console.log('getting ' + req.params.userid + ", " + req.params.boardid);
     db.getUser(req.params.userid, function(user) {
-        var board = user.boards.filter(function(board) {
+        const board = user.boards.filter(function(board) {
             return decodeURIComponent(req.params.boardid) === board.title;
         })[0];
         if(board) {
