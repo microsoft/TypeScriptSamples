@@ -3,11 +3,5 @@
         "target": "ES6",
         "module": "commonjs",
         "experimentalAsyncFunctions": true
-    },
-    "files": [
-        "typings/tsd.d.ts",
-        "index.ts",
-        "utils.ts",
-        "github.ts"
-    ]
+    }
 }
