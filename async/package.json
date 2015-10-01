@@ -14,7 +14,7 @@
     "gulp-sourcemaps": "^1.5.2",
     "gulp-typescript": "^2.9.0",
     "merge2": "^0.3.6",
-    "typescript": "^1.7.0"
+    "typescript": "next"
   },
   "scripts": {
     "test": "./node_modules/.bin/gulp test"
