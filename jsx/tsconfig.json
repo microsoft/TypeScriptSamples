@@ -1,8 +1,7 @@
 {
     "compilerOptions": {
         "jsx": "react",
-        "outDir": "bin",
-        "module": "amd"
+        "out": "bin/out.js"
     },
     "exclude": [
         "node_modules"
