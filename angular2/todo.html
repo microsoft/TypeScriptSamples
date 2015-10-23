@@ -18,7 +18,7 @@
 
     <ul id="todo-list">
 
-      <li *for="#todo of todoService.list">
+      <li *ng-for="#todo of todoService.list">
 
         <div class="view"
             [class.hidden]="todoEdit == todo">
