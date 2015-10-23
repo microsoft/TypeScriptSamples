@@ -10,7 +10,7 @@ npm start
 
 **Build**
 ```
-node node_modules/typescript/bin/tsc.js
+node node_modules/typescript/lib/tsc.js
 ```
 
 **Run server**
