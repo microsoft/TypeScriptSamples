@@ -1,15 +1,14 @@
-import {Component, View, bootstrap, NgFor, bind} from 'angular2/angular2';
+import {Component, bootstrap, NgFor, provide} from 'angular2/angular2';
 import {AngularFire, FirebaseArray} from '../firebase/angularfire';
 
 @Component({
   selector: 'todo-app',
-  bindings: [
+  providers: [
     AngularFire,
-    bind(Firebase).toValue(new Firebase('https://webapi.firebaseio-demo.com/test'))
-]})
-@View({
-  templateUrl: 'todo.html',
-  directives: [NgFor]
+    provide(Firebase, { useValue: new Firebase('https://webapi.firebaseio-demo.com/test') })
+  ],
+  directives: [NgFor],
+  templateUrl: 'todo.html'
 })
 class TodoApp {
   todoService: FirebaseArray;
