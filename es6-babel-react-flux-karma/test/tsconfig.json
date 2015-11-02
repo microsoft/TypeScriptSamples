@@ -1,0 +1,27 @@
+{
+    "compileOnSave": false,
+    "filesGlob": [
+        "**/*.{ts,tsx}",
+        "../typings/**/*.*.ts"
+    ],
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "noImplicitAny": false,
+        "suppressImplicitAnyIndexErrors": true,
+        "removeComments": false,
+        "preserveConstEnums": true,
+        "sourceMap": true
+    },
+    "files": [
+        "components/App.tests.tsx",
+        "components/WhoToGreet.tests.tsx",
+        "stores/GreetingStore.tests.ts",
+        "../typings/flux/flux.d.ts",
+        "../typings/jasmine/jasmine.d.ts",
+        "../typings/node/node.d.ts",
+        "../typings/react/react.d.ts",
+        "../typings/tsd.d.ts"
+    ],
+    "exclude": []
+}

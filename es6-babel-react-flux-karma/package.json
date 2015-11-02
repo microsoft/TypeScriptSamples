@@ -1,0 +1,67 @@
+{
+  "name": "globalize-so-what-cha-want",
+  "version": "0.10.0",
+  "description": "Tell me what Globalize 1.x modules you want to use, I'll tell you what you need.",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start --reporters mocha,junit --single-run --browsers PhantomJS",
+    "serve": "gulp watch-and-serve",
+    "watch": "gulp watch",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnnyreilly/globalize-so-what-cha-want.git"
+  },
+  "keywords": [
+    "Globalize",
+    "globalization",
+    "internationalization",
+    "typescript"
+  ],
+  "author": "John Reilly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnnyreilly/globalize-so-what-cha-want/issues"
+  },
+  "homepage": "https://github.com/johnnyreilly/globalize-so-what-cha-want#readme",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babel-core": "^5.8.25",
+    "babel-loader": "^5.3.2",
+    "del": "^2.0.2",
+    "eslint": "^1.6.0",
+    "flux": "^2.0.3",
+    "glob": "^5.0.15",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cached": "^1.1.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-eslint": "^1.0.0",
+    "gulp-if": "^2.0.0",
+    "gulp-inject": "^3.0.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-notify": "^2.2.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-streamify": "1.0.0",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.6",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.10",
+    "karma-coverage": "^0.5.2",
+    "karma-jasmine": "^0.3.6",
+    "karma-junit-reporter": "^0.3.7",
+    "karma-mocha-reporter": "^1.1.1",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "karma-phantomjs-shim": "^1.1.1",
+    "karma-sourcemap-loader": "^0.3.6",
+    "karma-webpack": "^1.7.0",
+    "phantomjs": "^1.9.17",
+    "react": "^0.13.3",
+    "ts-loader": "^0.6.0",
+    "typescript": "^1.6.2",
+    "webpack": "^1.12.2",
+    "webpack-notifier": "^1.2.1"
+  }
+}
