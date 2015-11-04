@@ -20,6 +20,7 @@
         "../typings/tsd.d.ts",
         "actions/GreetingActions.ts",
         "components/App.tsx",
+        "components/Greeting.tsx",
         "components/WhoToGreet.tsx",
         "constants/action-types/GreetingActionTypes.ts",
         "dependencies.ts",
