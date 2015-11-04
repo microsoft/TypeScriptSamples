@@ -7,7 +7,7 @@ You'll need [node / npm](https://nodejs.org/) and [tsd](http://definitelytyped.o
 ```
 npm install
 tsd install
-npm run watch
+npm run serve
 ```
 
 This will:
