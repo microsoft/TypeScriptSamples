@@ -1,5 +1,6 @@
 interface GreetingState {
-  targetOfGreeting: string;
+  greetings: string[];
+  newGreeting: string;
 }
 
 export default GreetingState;
