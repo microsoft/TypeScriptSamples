@@ -2,5 +2,14 @@
     "compilerOptions": {
         "module": "commonjs",
         "sourceMap": true
-    }
+    },
+    "files": [
+        "typings/node/node.d.ts",
+        "typings/mongodb/mongodb.d.ts",
+        "typings/express/express.d.ts",
+        "typings/express/express-middleware.d.ts",
+        "routes/index.ts",
+        "db.ts",
+        "app.ts"
+    ]
 }
