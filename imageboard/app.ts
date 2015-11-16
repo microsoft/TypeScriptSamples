@@ -4,14 +4,15 @@
 /// <reference path='typings/express/express-middleware.d.ts' />
 
 
-import http = require("http")
-import url = require("url")
-import routes = require("./routes/index")
-import db = require("./db")
-import express = require("express")
-import bodyParser = require("body-parser");
+import * as http from "http";
+import * as url from "url";
+import * as express from "express";
+import * as bodyParser from "body-parser";
 import methodOverride = require("method-override");
 import errorHandler = require("errorhandler");
+
+import * as routes from "./routes/index";
+import * as db from "./db";
 
 var app = express();
 
