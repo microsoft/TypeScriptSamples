@@ -13,7 +13,7 @@ Notable features:
 
 ## Running 
 
-Note: Perform steps 3 - 6 with your working directory set to the folder containing this README:
+Note: All commands entered need to be performed from within *this directory*.
 
 1. Install MongoDB if necessary (see http://docs.mongodb.org/manual/installation/ )
 
@@ -29,15 +29,22 @@ Note: Perform steps 3 - 6 with your working directory set to the folder containi
     <MONGO_INSTALL_DIRECTORY>/bin/mongorestore dump
     ```
 
-5. From this imageboard directory, install the app's node dependencies with the following command:
+5. From this imageboard directory, install the app's node dependencies, tsd, and typings with the following commands:
     ```shell
     npm install
+    npm install -g tsd
+    tsd install
     ```
+    Some things to note:
+
+    * `npm install` will install this project's node dependencies from `package.json`.
+    * `tsd install` will retrieve `.d.ts` files from [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped).
 
 6. Compile the app with the following command:
     ```shell
-    tsc --sourcemap --module commonjs app.ts
+    tsc
     ```
+    The above command will use `tsconfig.json` to compile all necessary files.
 
 7. Launch the Node process to serve the app using the following command:
     ```shell
