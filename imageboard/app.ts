@@ -1,15 +1,9 @@
-/// <reference path='typings/node/node.d.ts' />
-/// <reference path='typings/mongodb/mongodb.d.ts' />
-/// <reference path='typings/express/express.d.ts' />
-/// <reference path='typings/express/express-middleware.d.ts' />
-
-
 import * as http from "http";
 import * as url from "url";
 import * as express from "express";
 import * as bodyParser from "body-parser";
-import methodOverride = require("method-override");
 import errorHandler = require("errorhandler");
+import methodOverride = require("method-override");
 
 import * as routes from "./routes/index";
 import * as db from "./db";
@@ -28,9 +22,6 @@ app.use(express.static(__dirname + '/public'));
 
 var env = process.env.NODE_ENV || 'development';
 if (env === 'development') {
-    app.use(errorHandler({ dumpExceptions: true, showStack: true }));
-}
-else if (env === 'production') {
     app.use(errorHandler());
 }
 
