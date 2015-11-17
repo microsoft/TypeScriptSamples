@@ -6,28 +6,28 @@
   "bundle": "typings/tsd.d.ts",
   "installed": {
     "mime/mime.d.ts": {
-      "commit": "961b76f37bdfcff459cab9ed9fd3f204f0633d5e"
+      "commit": "fc341765ebbb04b7109981a25dced01f488f4d94"
     },
     "serve-static/serve-static.d.ts": {
-      "commit": "961b76f37bdfcff459cab9ed9fd3f204f0633d5e"
+      "commit": "fc341765ebbb04b7109981a25dced01f488f4d94"
     },
     "express/express.d.ts": {
-      "commit": "961b76f37bdfcff459cab9ed9fd3f204f0633d5e"
+      "commit": "fc341765ebbb04b7109981a25dced01f488f4d94"
     },
     "mongodb/mongodb.d.ts": {
-      "commit": "c560ba6f0f55ce6f50e9d06e37b5bc0e2b9117b0"
+      "commit": "fc341765ebbb04b7109981a25dced01f488f4d94"
     },
     "node/node.d.ts": {
-      "commit": "961b76f37bdfcff459cab9ed9fd3f204f0633d5e"
+      "commit": "fc341765ebbb04b7109981a25dced01f488f4d94"
     },
     "method-override/method-override.d.ts": {
-      "commit": "961b76f37bdfcff459cab9ed9fd3f204f0633d5e"
+      "commit": "fc341765ebbb04b7109981a25dced01f488f4d94"
     },
     "errorhandler/errorhandler.d.ts": {
-      "commit": "961b76f37bdfcff459cab9ed9fd3f204f0633d5e"
+      "commit": "fc341765ebbb04b7109981a25dced01f488f4d94"
     },
     "body-parser/body-parser.d.ts": {
-      "commit": "961b76f37bdfcff459cab9ed9fd3f204f0633d5e"
+      "commit": "fc341765ebbb04b7109981a25dced01f488f4d94"
     }
   }
 }
