@@ -20,6 +20,6 @@ export class Greeter
 
     stop()
     {
-        clearTimeout(this.timerToken);
+        clearInterval(this.timerToken);
     }
 }
