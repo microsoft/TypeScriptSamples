@@ -1,4 +1,4 @@
-import * as React from 'react/addons';
+import * as React from 'react';
 import * as GreetingActions from '../actions/GreetingActions';
 
 interface Props {
