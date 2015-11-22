@@ -1,4 +1,4 @@
-import * as React from 'react/addons';
+import * as React from 'react';
 import GreetingStore from '../stores/GreetingStore';
 import * as GreetingActions from '../actions/GreetingActions';
 import GreetingState from '../types/GreetingState';

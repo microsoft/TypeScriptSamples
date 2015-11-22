@@ -21,6 +21,8 @@
         "../typings/flux/flux.d.ts",
         "../typings/jasmine/jasmine.d.ts",
         "../typings/node/node.d.ts",
+        "../typings/react/react-addons-test-utils.d.ts",
+        "../typings/react/react-dom.d.ts",
         "../typings/react/react.d.ts",
         "../typings/tsd.d.ts"
     ],
