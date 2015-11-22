@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as GreetingActions from '../actions/GreetingActions';
 
 interface Props {
-  targetOfGreeting: string;
+  newGreeting: string;
 }
 
 class WhoToGreet extends React.Component<Props, any> {
@@ -11,18 +11,41 @@ class WhoToGreet extends React.Component<Props, any> {
   }
 
   static propTypes: React.ValidationMap<Props> = {
-    targetOfGreeting: React.PropTypes.string.isRequired
+    newGreeting: React.PropTypes.string.isRequired
   }
 
   render() {
     return (
-      <input type="text" value={ this.props.targetOfGreeting } onChange={ this._handleTargetOfGreetingChange } />
+        <form role="form">
+          <div className="form-group">
+            <input type="text" className="form-control" placeholder="Who would you like to greet?"
+                   value={ this.props.newGreeting }
+                   onChange={ this._handleNewGreetingChange } />
+            <button type="submit" className="btn btn-default btn-primary"
+                    onClick={ this._onSubmit }
+                    disabled={ this._preventSubmission }>
+                    Add greeting
+            </button>
+          </div>
+        </form>
     );
   }
 
-  _handleTargetOfGreetingChange = (event) => {
-    const { target: { value: targetOfGreeting } } = event;
-    GreetingActions.greetingChanged(targetOfGreeting);
+  get _preventSubmission() {
+    return !this.props.newGreeting;
+  }
+
+  _handleNewGreetingChange = (event) => {
+    const { target: { value: newGreeting } } = event;
+    GreetingActions.newGreetingChanged(newGreeting);
+  }
+
+  _onSubmit = (event) => {
+    event.preventDefault();
+
+    if (!this._preventSubmission) {
+      GreetingActions.addGreeting(this.props.newGreeting);
+    }
   }
 }
 

@@ -3,6 +3,7 @@ import GreetingStore from '../stores/GreetingStore';
 import * as GreetingActions from '../actions/GreetingActions';
 import GreetingState from '../types/GreetingState';
 import WhoToGreet from './WhoToGreet';
+import Greeting from './Greeting';
 
 class App extends React.Component<any, GreetingState> {
   constructor(props) {
@@ -19,12 +20,14 @@ class App extends React.Component<any, GreetingState> {
   }
 
   render() {
-    const { targetOfGreeting } = this.state;
+    const { greetings, newGreeting } = this.state;
     return (
       <div className="container-fluid">
-        <h1>Hello { targetOfGreeting }</h1>
+        <h1>Hello People!</h1>
 
-        <WhoToGreet targetOfGreeting={ targetOfGreeting } />
+        <WhoToGreet newGreeting={ newGreeting } />
+
+        { greetings.map((g, index) => <Greeting key={ index } targetOfGreeting={ g } />) }
       </div>
     );
   }
