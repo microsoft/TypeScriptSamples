@@ -4,7 +4,7 @@ import App from '../../src/components/App';
 import WhoToGreet from '../../src/components/WhoToGreet';
 import Greeting from '../../src/components/Greeting';
 import GreetingStore from '../../src/stores/GreetingStore';
-const __react = React; // only in place to prevent React being purged from dependencies as not used directly
+React; // use React as an expression to prevent React being purged from dependencies as not used directly
 
 describe('App', () => {
   it('renders expected HTML', () => {

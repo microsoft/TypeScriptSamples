@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as TestUtils from 'react-addons-test-utils';
 import WhoToGreet from '../../src/components/WhoToGreet';
 import * as GreetingActions from '../../src/actions/GreetingActions';
-const __react = React; // only in place to prevent React being purged from dependencies as not used directly
+React; // use React as an expression to prevent React being purged from dependencies as not used directly
 
 describe('WhoToGreet', () => {
   let handleSelectionChangeSpy: jasmine.Spy;
