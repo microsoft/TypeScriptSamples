@@ -6,16 +6,22 @@
   "bundle": "typings/tsd.d.ts",
   "installed": {
     "jasmine/jasmine.d.ts": {
-      "commit": "3191f6e0088eee07c4d8fd24e4d27a40a60d9eb9"
+      "commit": "fa04c80f4a889613b96cb4f283848c61a9f64233"
     },
     "flux/flux.d.ts": {
-      "commit": "3191f6e0088eee07c4d8fd24e4d27a40a60d9eb9"
+      "commit": "fa04c80f4a889613b96cb4f283848c61a9f64233"
     },
     "node/node.d.ts": {
-      "commit": "3191f6e0088eee07c4d8fd24e4d27a40a60d9eb9"
+      "commit": "fa04c80f4a889613b96cb4f283848c61a9f64233"
     },
     "react/react.d.ts": {
-      "commit": "3191f6e0088eee07c4d8fd24e4d27a40a60d9eb9"
-    }
+      "commit": "fa04c80f4a889613b96cb4f283848c61a9f64233"
+    },
+    "react/react-dom.d.ts": {
+      "commit": "fa04c80f4a889613b96cb4f283848c61a9f64233"
+    },
+    "react/react-addons-test-utils.d.ts": {
+      "commit": "fa04c80f4a889613b96cb4f283848c61a9f64233"
+     }
   }
 }
