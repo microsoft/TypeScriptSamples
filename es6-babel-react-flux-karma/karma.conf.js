@@ -9,7 +9,7 @@ module.exports = function(config) {
     browsers: [ 'PhantomJS' ],
 
     files: [
-      'src/dependencies.ts', // This ensures we have the es6 shims in place from babel
+      'test/import-babel-polyfill.js', // This ensures we have the es6 shims in place from babel
       'test/**/*.tests.ts',
       'test/**/*.tests.tsx'
     ],
@@ -21,6 +21,7 @@ module.exports = function(config) {
     logLevel: config.LOG_INFO, //config.LOG_DEBUG
 
     preprocessors: {
+      'test/import-babel-polyfill.js': [ 'webpack', 'sourcemap' ],
       'src/**/*.{ts,tsx}': [ 'webpack', 'sourcemap' ],
       'test/**/*.tests.{ts,tsx}': [ 'webpack', 'sourcemap' ]
     },

@@ -2,17 +2,16 @@
 'use strict';
 
 var path = require('path');
-// var webpack = require('webpack');
 
 module.exports = {
   cache: true,
   entry: {
     main: './src/main.tsx',
     vendor: [
-      'react',
-      'flux',
+      'babel-polyfill',
       'events',
-      'babel/polyfill'
+      'flux',
+      'react'
     ]
   },
   output: {
@@ -24,11 +23,14 @@ module.exports = {
     loaders: [{
       test: /\.ts(x?)$/,
       exclude: /node_modules/,
-      loader: 'babel-loader!ts-loader'
+      loader: 'babel-loader?presets[]=es2015&presets[]=react!ts-loader'
     }, {
       test: /\.js$/,
       exclude: /node_modules/,
-      loader: 'babel'
+      loader: 'babel',
+      query: {
+        presets: ['es2015', 'react']
+      }
     }]
   },
   plugins: [

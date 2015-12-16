@@ -25,12 +25,14 @@
         "components/Greeting.tsx",
         "components/WhoToGreet.tsx",
         "constants/action-types/GreetingActionTypes.ts",
-        "dependencies.ts",
         "dispatcher/AppDispatcher.ts",
         "main.tsx",
         "stores/FluxStore.ts",
         "stores/GreetingStore.ts",
         "types/GreetingState.ts"
     ],
-    "exclude": []
+    "exclude": [],
+    "atom": {
+        "rewriteTsconfig": true
+    }
 }
