@@ -59,10 +59,8 @@ gulp.task('watch', ['delete-dist'], function(done) {
 gulp.task('watch-and-serve', ['watch'], function() {
   // local as not required for build
   var express = require('express')
-  var serveStatic = require('serve-static')
-
   var app = express()
 
-  app.use(serveStatic('dist', {'index': 'index.html'}))
+  app.use(express.static('dist', {'index': 'index.html'}))
   app.listen(8080);
 });
