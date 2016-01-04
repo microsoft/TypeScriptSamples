@@ -21,7 +21,7 @@ function injectIndex(options) {
   var jsCssGlob = 'dist/**/*.{js,css}';
 
   function checkForInitialFilesThenRun() {
-    glob(jsCssGlob, options, function (er, files) {
+    glob(jsCssGlob, function (er, files) {
       var filesWeNeed = ['dist/scripts/main', 'dist/scripts/vendor'/*, 'dist/styles/main'*/];
 
       function fileIsPresent(fileWeNeed) {
