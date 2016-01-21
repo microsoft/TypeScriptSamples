@@ -1,4 +1,4 @@
-import repeat from "core-js/library/fn/string/repeat"
+import repeat from "core-js/fn/string/repeat"
 
 export class Greeter
 {

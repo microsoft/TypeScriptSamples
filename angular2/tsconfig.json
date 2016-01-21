@@ -2,10 +2,10 @@
     "compilerOptions": {
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "module": "AMD",
+        "module": "commonjs",
         "target": "es5"
     },
     "files": [
-        "todo.ts"
+        "app/todo.ts"
     ]
 }

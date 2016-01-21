@@ -1,20 +1,20 @@
 class Animal {
     constructor(public name) { }
     move(meters) {
-        alert(this.name + " moved " + meters + "m.");
+        console.log(this.name + " moved " + meters + "m.");
     }
 }
 
 class Snake extends Animal {
     move() {
-        alert("Slithering...");
+        console.log("Slithering...");
         super.move(5);
     }
 }
 
 class Horse extends Animal {
     move() {
-        alert("Galloping...");
+        console.log("Galloping...");
         super.move(45);
     }
 }
