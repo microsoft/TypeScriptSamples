@@ -8,4 +8,4 @@ The following is the list of modifications made to change the JS project to a TS
     * Remove `$` from `jquery.d.ts` in `e2e-tests`.
     * Remove `protractor` def from `app`.
 
-You will notice that stuff like `angular`, `mocks` etc will light up with intellisence and you will get errors if you try to misuse these.
+You will notice that stuff like `angular`, `mocks` etc will light up with IntelliSense and you will get errors if you try to misuse these.
