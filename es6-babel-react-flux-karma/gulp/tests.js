@@ -12,7 +12,7 @@ module.exports = {
       singleRun: false,
 
       // Fancy runner
-      plugins: ['karma-webpack', 'karma-jasmine', 'karma-mocha-reporter', /*'karma-junit-reporter', 'karma-coverage', */'karma-sourcemap-loader', 'karma-phantomjs-launcher', 'karma-phantomjs-shim'], // karma-phantomjs-shim only in place until PhantomJS hits 2.0 and has function.bind
+      plugins: ['karma-webpack', 'karma-jasmine', 'karma-mocha-reporter', /*'karma-junit-reporter', 'karma-coverage', */'karma-sourcemap-loader', 'karma-phantomjs-launcher'], 
       reporters: ['mocha']
     };
 

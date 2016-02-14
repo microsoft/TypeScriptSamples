@@ -16,7 +16,7 @@ module.exports = function(config) {
 
     port: 9876,
 
-    frameworks: [ 'jasmine', 'phantomjs-shim' ],
+    frameworks: [ 'jasmine' ],
 
     logLevel: config.LOG_INFO, //config.LOG_DEBUG
 
