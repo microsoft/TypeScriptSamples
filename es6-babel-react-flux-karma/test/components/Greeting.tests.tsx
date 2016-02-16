@@ -2,7 +2,6 @@ import * as React from 'react';
 import * as TestUtils from 'react-addons-test-utils';
 import Greeting from '../../src/components/Greeting';
 import * as GreetingActions from '../../src/actions/GreetingActions';
-React; // use React as an expression to prevent React being purged from dependencies as not used directly
 
 describe('Greeting', () => {
   let handleSelectionChangeSpy: jasmine.Spy;
