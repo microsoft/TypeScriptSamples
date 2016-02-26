@@ -1,11 +1,9 @@
-export class Greeter
-{
+export class Greeter {
     element: HTMLElement;
     span: HTMLElement;
     timerToken: number;
 
-    constructor (element: HTMLElement)
-    {
+    constructor (element: HTMLElement) {
         this.element = element;
         this.element.innerHTML += "The time is: ";
         this.span = document.createElement('span');
@@ -13,13 +11,11 @@ export class Greeter
         this.span.innerHTML = new Date().toUTCString();
     }
 
-    start()
-    {
+    start() {
         this.timerToken = setInterval(() => this.span.innerHTML = new Date().toUTCString(), 500);
     }
 
-    stop()
-    {
+    stop() {
         clearInterval(this.timerToken);
     }
 }
