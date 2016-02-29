@@ -1,5 +1,6 @@
 import GreetingStore from '../../src/stores/GreetingStore';
 import GreetingActionTypes from '../../src/constants/action-types/GreetingActionTypes';
+import { AddGreetingEvent, RemoveGreeting, NewGreetingChanged } from '../../src/actions/GreetingActions';
 
 const registeredCallback = GreetingStore._onDispatch.bind(GreetingStore);
 
@@ -16,10 +17,7 @@ describe('GreetingStore', () => {
   });
 
   it('given an ADD_GREETING action with a newGreeting of \'Benjamin\', the newGreeting should be an empty string and greetings should contain \'Benjamin\'', () => {
-    [{
-      payload: 'Benjamin',
-      type: GreetingActionTypes.ADD_GREETING,
-    }].forEach(registeredCallback);
+    [new AddGreetingEvent('Benjamin')].forEach(registeredCallback);
 
     const { greetings, newGreeting } = GreetingStore.getState();
 
@@ -28,13 +26,7 @@ describe('GreetingStore', () => {
   });
 
   it('given an REMOVE_GREETING action with a greetingToRemove of \'Benjamin\', the state greetings should be an empty array', () => {
-    [{
-      payload: 'Benjamin',
-      type: GreetingActionTypes.ADD_GREETING,
-    }, {
-      payload: 'Benjamin',
-      type: GreetingActionTypes.REMOVE_GREETING,
-    }].forEach(registeredCallback);
+    [new AddGreetingEvent('Benjamin'), new RemoveGreeting('Benjamin')].forEach(registeredCallback);
 
     const { greetings } = GreetingStore.getState();
 
@@ -43,10 +35,7 @@ describe('GreetingStore', () => {
   });
 
   it('given a NEW_GREETING_CHANGED action with a newGreeting of \'Benjamin\', the state newGreeting should be \'Benjamin\'', () => {
-    [{
-      payload: 'Benjamin',
-      type: GreetingActionTypes.NEW_GREETING_CHANGED,
-    }].forEach(registeredCallback);
+    [new NewGreetingChanged('Benjamin')].forEach(registeredCallback);
 
     const { newGreeting } = GreetingStore.getState();
 

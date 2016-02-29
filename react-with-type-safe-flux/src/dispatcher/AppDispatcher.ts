@@ -1,6 +1,10 @@
 import { Dispatcher } from 'flux';
 
-export type Event = {type: string; payload: any};
+export class TypedEvent<P> {
+  constructor(public payload: P) {}
+}
+
+export type Event = TypedEvent<any>;
 
 const dispatcherInstance: Flux.Dispatcher<Event> = new Dispatcher();
 
