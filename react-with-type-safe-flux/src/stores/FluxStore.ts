@@ -1,21 +1,21 @@
 import { EventEmitter } from 'events';
+import { Event } from '../dispatcher/AppDispatcher';
 
 const CHANGE_EVENT = 'change';
 
-class FluxStore<PayloadType, TState> {
+class FluxStore<TState> {
   _changed: boolean;
   _emitter: EventEmitter;
   dispatchToken: string;
-  _dispatcher: Flux.Dispatcher<PayloadType>;
+  _dispatcher: Flux.Dispatcher<Event>;
   _cleanStateFn: () => TState;
   _state: TState;
-  protected _onDispatch: (payload: PayloadType) => void;
 
-  constructor(dispatcher: Flux.Dispatcher<PayloadType>, cleanStateFn: () => TState) {
+  constructor(dispatcher: Flux.Dispatcher<Event>, protected _onDispatch: (action: Event) => void, cleanStateFn: () => TState) {
     this._emitter = new EventEmitter();
     this._changed = false;
     this._dispatcher = dispatcher;
-    this.dispatchToken = dispatcher.register((payload: PayloadType) => {
+    this.dispatchToken = dispatcher.register((payload: Event) => {
       this._invokeOnDispatch(payload);
     });
 
@@ -45,7 +45,7 @@ class FluxStore<PayloadType, TState> {
     this._state = this._cleanStateFn();
   }
 
-  _invokeOnDispatch(payload: PayloadType) {
+  _invokeOnDispatch(payload: Event) {
     this._changed = false;
     this._onDispatch(payload);
     if (this._changed) {

@@ -17,7 +17,7 @@ describe('GreetingStore', () => {
 
   it('given an ADD_GREETING action with a newGreeting of \'Benjamin\', the newGreeting should be an empty string and greetings should contain \'Benjamin\'', () => {
     [{
-      newGreeting: 'Benjamin',
+      payload: 'Benjamin',
       type: GreetingActionTypes.ADD_GREETING,
     }].forEach(registeredCallback);
 
@@ -29,10 +29,10 @@ describe('GreetingStore', () => {
 
   it('given an REMOVE_GREETING action with a greetingToRemove of \'Benjamin\', the state greetings should be an empty array', () => {
     [{
-      newGreeting: 'Benjamin',
+      payload: 'Benjamin',
       type: GreetingActionTypes.ADD_GREETING,
     }, {
-      greetingToRemove: 'Benjamin',
+      payload: 'Benjamin',
       type: GreetingActionTypes.REMOVE_GREETING,
     }].forEach(registeredCallback);
 
@@ -44,7 +44,7 @@ describe('GreetingStore', () => {
 
   it('given a NEW_GREETING_CHANGED action with a newGreeting of \'Benjamin\', the state newGreeting should be \'Benjamin\'', () => {
     [{
-      newGreeting: 'Benjamin',
+      payload: 'Benjamin',
       type: GreetingActionTypes.NEW_GREETING_CHANGED,
     }].forEach(registeredCallback);
 

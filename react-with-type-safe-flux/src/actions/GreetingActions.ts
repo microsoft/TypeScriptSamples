@@ -3,21 +3,21 @@ import GreetingActionTypes from '../constants/action-types/GreetingActionTypes';
 
 export function addGreeting(newGreeting: string) {
   AppDispatcher.dispatch({
-    newGreeting,
+    payload: newGreeting,
     type: GreetingActionTypes.ADD_GREETING
-  } as Event);
+  });
 }
 
 export function newGreetingChanged(newGreeting: string) {
   AppDispatcher.dispatch({
-    newGreeting,
+    payload: newGreeting,
     type: GreetingActionTypes.NEW_GREETING_CHANGED
-  } as Event);
+  });
 }
 
 export function removeGreeting(greetingToRemove: string) {
   AppDispatcher.dispatch({
-    greetingToRemove,
+    payload: greetingToRemove,
     type: GreetingActionTypes.REMOVE_GREETING
-  } as Event);
+  });
 }
