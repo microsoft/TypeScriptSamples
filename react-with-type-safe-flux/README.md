@@ -2,11 +2,11 @@
 
 ## Getting started
 
-You'll need [node / npm](https://nodejs.org/) and [tsd](http://definitelytyped.org/tsd/) installed globally.  To get up and running just enter:
+You'll need [node / npm](https://nodejs.org/) installed.  To get up and running just enter:
 
 ```
 npm install
-tsd install
+npm run tsd install
 npm run serve
 ```
 

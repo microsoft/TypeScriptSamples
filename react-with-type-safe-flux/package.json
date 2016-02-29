@@ -4,10 +4,14 @@
   "description": "ES6 + TypeScript + Babel + React + Karma: The Secret Recipe",
   "main": "index.js",
   "scripts": {
+    "tsd": "tsd",
     "test": "karma start --reporters mocha,junit --single-run --browsers PhantomJS",
     "serve": "gulp watch-and-serve",
     "watch": "gulp watch",
     "build": "gulp build"
+  },
+  "bin": {
+    "tsd": "./node_modules/tsd/build/cli.js"
   },
   "repository": {
     "type": "git",
@@ -65,6 +69,7 @@
     "react-addons-test-utils": "^0.14.3",
     "react-dom": "^0.14.3",
     "ts-loader": "^0.8.1",
+    "tsd": "^0.6.5",
     "typescript": "^1.8.0",
     "webpack": "^1.12.2",
     "webpack-notifier": "^1.2.1"
