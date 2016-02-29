@@ -6,7 +6,7 @@ interface Props {
 }
 
 class WhoToGreet extends React.Component<Props, any> {
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
   }
 
@@ -35,12 +35,12 @@ class WhoToGreet extends React.Component<Props, any> {
     return !this.props.newGreeting;
   }
 
-  _handleNewGreetingChange = (event) => {
-    const { target: { value: newGreeting } } = event;
+  _handleNewGreetingChange = (event: React.FormEvent) => {
+    const newGreeting = (event.target as HTMLInputElement).value;
     GreetingActions.newGreetingChanged(newGreeting);
   }
 
-  _onSubmit = (event) => {
+  _onSubmit = (event: React.FormEvent) => {
     event.preventDefault();
 
     if (!this._preventSubmission) {

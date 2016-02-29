@@ -9,7 +9,7 @@
     "compilerOptions": {
         "jsx": "preserve",
         "target": "es6",
-        "noImplicitAny": false,
+        "noImplicitAny": true,
         "removeComments": false,
         "preserveConstEnums": true,
         "sourceMap": true

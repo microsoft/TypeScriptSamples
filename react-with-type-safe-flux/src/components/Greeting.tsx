@@ -7,7 +7,7 @@ interface Props {
 }
 
 class Greeting extends React.Component<Props, any> {
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
   }
 
@@ -28,7 +28,7 @@ class Greeting extends React.Component<Props, any> {
     );
   }
 
-  _onClick = (event) => {
+  _onClick = (event: React.MouseEvent) => {
     GreetingActions.removeGreeting(this.props.targetOfGreeting);
   }
 }

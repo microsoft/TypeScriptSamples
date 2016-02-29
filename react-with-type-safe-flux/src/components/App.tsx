@@ -5,8 +5,8 @@ import GreetingState from '../types/GreetingState';
 import WhoToGreet from './WhoToGreet';
 import Greeting from './Greeting';
 
-class App extends React.Component<any, GreetingState> {
-  constructor(props) {
+class App extends React.Component<{}, GreetingState> {
+  constructor(props: {}) {
     super(props);
     this.state = this._getStateFromStores();
   }

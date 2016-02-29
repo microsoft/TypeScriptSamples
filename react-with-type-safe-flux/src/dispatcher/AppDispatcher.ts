@@ -1,5 +1,5 @@
 import { Dispatcher } from 'flux';
 
-const dispatcherInstance = new Dispatcher();
+const dispatcherInstance: Flux.Dispatcher<any> = new Dispatcher();
 
 export default dispatcherInstance;

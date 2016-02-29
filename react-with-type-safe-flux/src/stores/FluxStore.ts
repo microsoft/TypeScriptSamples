@@ -2,19 +2,19 @@ import { EventEmitter } from 'events';
 
 const CHANGE_EVENT = 'change';
 
-class FluxStore<TState> {
+class FluxStore<PayloadType, TState> {
   _changed: boolean;
   _emitter: EventEmitter;
   dispatchToken: string;
-  _dispatcher: Flux.Dispatcher<any>;
+  _dispatcher: Flux.Dispatcher<PayloadType>;
   _cleanStateFn: () => TState;
   _state: TState;
 
-  constructor(dispatcher, cleanStateFn) {
+  constructor(dispatcher: Flux.Dispatcher<PayloadType>, cleanStateFn: () => TState) {
     this._emitter = new EventEmitter();
     this._changed = false;
     this._dispatcher = dispatcher;
-    this.dispatchToken = dispatcher.register(payload => {
+    this.dispatchToken = dispatcher.register((payload: PayloadType) => {
       this._invokeOnDispatch(payload);
     });
 
@@ -31,11 +31,11 @@ class FluxStore<TState> {
 
   hasChanged() { return this._changed; }
 
-  addChangeListener(callback) {
+  addChangeListener(callback: () => void) {
     this._emitter.on(CHANGE_EVENT, callback);
   }
 
-  removeChangeListener(callback) {
+  removeChangeListener(callback: () => void) {
     this._emitter.removeListener(CHANGE_EVENT, callback);
   }
 
@@ -44,7 +44,7 @@ class FluxStore<TState> {
     this._state = this._cleanStateFn();
   }
 
-  _invokeOnDispatch(payload) {
+  _invokeOnDispatch(payload: PayloadType) {
     this._changed = false;
     this._onDispatch(payload);
     if (this._changed) {
@@ -52,7 +52,7 @@ class FluxStore<TState> {
     }
   }
 
-  _onDispatch(payload) {
+  _onDispatch(payload: PayloadType) {
     if (process.env.NODE_ENV !== 'production') {
       console.error(`${this.constructor.name} has not overridden FluxStore.__onDispatch(), which is required`); // eslint-disable-line no-console
     }
