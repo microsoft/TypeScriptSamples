@@ -1,5 +1,7 @@
 import { Dispatcher } from 'flux';
 
-const dispatcherInstance: Flux.Dispatcher<any> = new Dispatcher();
+export type Event = {type: string};
 
-export default dispatcherInstance;
+const dispatcherInstance: Flux.Dispatcher<Event> = new Dispatcher();
+
+export const AppDispatcher = dispatcherInstance;

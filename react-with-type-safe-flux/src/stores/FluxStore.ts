@@ -9,6 +9,7 @@ class FluxStore<PayloadType, TState> {
   _dispatcher: Flux.Dispatcher<PayloadType>;
   _cleanStateFn: () => TState;
   _state: TState;
+  protected _onDispatch: (payload: PayloadType) => void;
 
   constructor(dispatcher: Flux.Dispatcher<PayloadType>, cleanStateFn: () => TState) {
     this._emitter = new EventEmitter();
@@ -49,12 +50,6 @@ class FluxStore<PayloadType, TState> {
     this._onDispatch(payload);
     if (this._changed) {
       this._emitter.emit(CHANGE_EVENT);
-    }
-  }
-
-  _onDispatch(payload: PayloadType) {
-    if (process.env.NODE_ENV !== 'production') {
-      console.error(`${this.constructor.name} has not overridden FluxStore.__onDispatch(), which is required`); // eslint-disable-line no-console
     }
   }
 }

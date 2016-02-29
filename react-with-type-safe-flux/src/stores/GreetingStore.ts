@@ -1,6 +1,6 @@
 import FluxStore from './FluxStore';
 import GreetingActionTypes from '../constants/action-types/GreetingActionTypes';
-import AppDispatcher from '../dispatcher/AppDispatcher';
+import {Event, AppDispatcher} from '../dispatcher/AppDispatcher';
 import GreetingState from '../types/GreetingState';
 
 class GreeterStore<TPayload> extends FluxStore<TPayload, GreetingState> {
@@ -15,8 +15,8 @@ class GreeterStore<TPayload> extends FluxStore<TPayload, GreetingState> {
     return this._state
   }
 
-  _onDispatch(action: any) {
-    switch(action.type) {
+  _onDispatch = (action: any) => {
+    switch((<Event>action).type) {
       case GreetingActionTypes.ADD_GREETING:
         this._state.newGreeting = '';
         this._state.greetings = this._state.greetings.concat(action.newGreeting);
