@@ -1,7 +1,5 @@
 # TypeScript Samples
 
-> Samples for TypeScript
-
 ##### [AMD Modules](amd/README.md)
 
 ##### [Angular Seed TypeScript](angular1/README.md)
