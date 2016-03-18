@@ -1,4 +1,6 @@
-# ES6 + TypeScript + Babel + React + Karma: The Secret Recipe
+# Type-Safe Flux Example
+
+Based on [ES6 + TypeScript + Babel + React + Karma: The Secret Recipe](../es6-babel-react-flux-karma), see more in corresponding [blog post](https://sameroom.io/blog/type-safe-flux-architecture-using-typescript/).
 
 ## Getting started
 
