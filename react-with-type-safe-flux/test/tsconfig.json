@@ -1,0 +1,34 @@
+{
+    "compileOnSave": false,
+    "filesGlob": [
+        "**/*.{ts,tsx}",
+        "../typings/**/*.*.ts"
+    ],
+    "compilerOptions": {
+        "jsx": "preserve",
+        "target": "es6",
+        "module": "commonjs",
+        "noImplicitAny": false,
+        "suppressImplicitAnyIndexErrors": true,
+        "removeComments": false,
+        "preserveConstEnums": true,
+        "sourceMap": true
+    },
+    "files": [
+        "components/App.tests.tsx",
+        "components/Greeting.tests.tsx",
+        "components/WhoToGreet.tests.tsx",
+        "stores/GreetingStore.tests.ts",
+        "../typings/flux/flux.d.ts",
+        "../typings/jasmine/jasmine.d.ts",
+        "../typings/node/node.d.ts",
+        "../typings/react/react-addons-test-utils.d.ts",
+        "../typings/react/react-dom.d.ts",
+        "../typings/react/react.d.ts",
+        "../typings/tsd.d.ts"
+    ],
+    "exclude": [],
+    "atom": {
+        "rewriteTsconfig": true
+    }
+}

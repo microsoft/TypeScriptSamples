@@ -1,0 +1,38 @@
+{
+    "compileOnSave": false,
+    "filesGlob": [
+        "../typings/**/*.*.ts",
+        "!../typings/jasmine/jasmine.d.ts",
+        "!../typings/react/react-addons-test-utils.d.ts",
+        "**/*.{ts,tsx}"
+    ],
+    "compilerOptions": {
+        "jsx": "preserve",
+        "target": "es6",
+        "noImplicitAny": true,
+        "removeComments": false,
+        "preserveConstEnums": true,
+        "sourceMap": true
+    },
+    "files": [
+        "../typings/flux/flux.d.ts",
+        "../typings/node/node.d.ts",
+        "../typings/react/react-dom.d.ts",
+        "../typings/react/react.d.ts",
+        "../typings/tsd.d.ts",
+        "actions/GreetingActions.ts",
+        "components/App.tsx",
+        "components/Greeting.tsx",
+        "components/WhoToGreet.tsx",
+        "constants/action-types/GreetingActionTypes.ts",
+        "dispatcher/AppDispatcher.ts",
+        "main.tsx",
+        "stores/FluxStore.ts",
+        "stores/GreetingStore.ts",
+        "types/GreetingState.ts"
+    ],
+    "exclude": [],
+    "atom": {
+        "rewriteTsconfig": true
+    }
+}
