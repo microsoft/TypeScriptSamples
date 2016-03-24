@@ -13,7 +13,7 @@
         "typescript": "^1.5.3"
     },
     "scripts": {
-        "tsc": "node node_modules/typescript/bin/tsc.js",
+        "tsc": "node node_modules/typescript/lib/tsc.js",
         "browserify": "browserify src/app.js -o bundle.js -s app",
         "listen": "node node_modules/http-server/bin/http-server",
         "all": "npm run tsc &&  npm run browserify && npm run listen"
