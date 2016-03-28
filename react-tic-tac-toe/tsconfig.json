@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "jsx": "react",
+        "outDir": "./dist",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "module": "commonjs",
+        "target": "es5"
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "files": [
+        "./typings/main.d.ts",
+        "./src/app.tsx",
+        "./src/board.tsx",
+        "./src/constants.ts",
+        "./src/gameStateBar.tsx",
+        "./src/restartBtn.tsx"
+    ]
+}

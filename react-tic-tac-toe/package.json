@@ -1,0 +1,19 @@
+{
+    "name": "TicTacToe",
+    "version": "1.0.0",
+    "description": "Tic Tac Toe built with TypeScript and React",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Limin Zhu",
+    "license": "ISC",
+    "dependencies": {
+        "react": "^0.14.7",
+        "react-dom": "^0.14.7"
+    },
+    "devDependencies": {
+        "source-map-loader": "^0.1.5",
+        "ts-loader": "^0.8.1"
+    }
+}

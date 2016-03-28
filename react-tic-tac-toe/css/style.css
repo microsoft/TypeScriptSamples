@@ -1,0 +1,118 @@
+html {
+    box-sizing: border-box;
+}
+* {
+    box-sizing: inherit;
+}
+
+.app {
+    font-family: 'Open Sans', sans-serif;
+    margin: 100px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.board {
+    position: relative;
+    width: 500px;
+    height:500px;
+}
+
+.cell {
+    float: left;
+    width: 33.3333%;
+    height: 33.3333%;
+    line-height: 166.67px;
+    color: black;
+    font-size:  90pt;
+    text-align: center;
+    border-color: orangered;
+    border-width: 3px;
+}
+.cell.top {
+    border-bottom-style:solid;
+}
+.cell.bottom {
+    border-top-style:solid;
+}
+.cell.left {
+    border-right-style:solid;
+}
+.cell.right {
+    border-left-style:solid;
+}
+
+.X{
+    animation-name: appear;
+    animation-duration: .3s;
+}
+.O{
+    animation-name: appear;
+    animation-duration: .3s;
+    animation-delay:.3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes appear {
+    from { font-size: 90pt; opacity: 0;}
+    to { font-size: 100pt; opacity: 1;}
+}
+
+.description{
+    cursor:pointer;
+    font-size:25px;
+    font-weight:bold;
+    padding:15px 0px;
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    margin-top: 30px;
+    margin-right: -35px;
+}
+.t1{
+    margin-left: 60px;
+}
+.t2{
+    margin-right: 60px;
+}
+
+.gameStateBar {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    height: 60px;
+}
+
+.restartBtn {
+    box-shadow: 3px 3px 9px 2px #54a3f7;
+    background-color:#007dc1;
+    border-radius:28px;
+    border:1px solid #124d77;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:25px;
+    font-weight:bold;
+    padding:15px 36px;
+    text-decoration:none;
+    text-shadow:0px 0px 7px #154682;
+    position: relative;
+    display: block;
+    margin: 40px auto;
+    width: 160px;
+    text-align: center;
+}
+.restartBtn:hover {
+    background-color:#0061a7;
+}
+.restartBtn:active {
+    position:relative;
+    top:1px;
+}
