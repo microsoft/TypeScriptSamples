@@ -2,7 +2,7 @@
     "compileOnSave": false,
     "filesGlob": [
         "**/*.{ts,tsx}",
-        "../typings/**/*.*.ts"
+        "../typings/browser/**/*.*.ts"
     ],
     "compilerOptions": {
         "jsx": "preserve",
@@ -19,13 +19,12 @@
         "components/Greeting.tests.tsx",
         "components/WhoToGreet.tests.tsx",
         "stores/GreetingStore.tests.ts",
-        "../typings/flux/flux.d.ts",
-        "../typings/jasmine/jasmine.d.ts",
-        "../typings/node/node.d.ts",
-        "../typings/react/react-addons-test-utils.d.ts",
-        "../typings/react/react-dom.d.ts",
-        "../typings/react/react.d.ts",
-        "../typings/tsd.d.ts"
+        "../typings/browser/ambient/flux/index.d.ts",
+        "../typings/browser/ambient/jasmine/index.d.ts",
+        "../typings/browser/ambient/node/index.d.ts",
+        "../typings/browser/ambient/react-addons-test-utils/index.d.ts",
+        "../typings/browser/ambient/react-dom/index.d.ts",
+        "../typings/browser/ambient/react/index.d.ts"
     ],
     "exclude": [],
     "atom": {
