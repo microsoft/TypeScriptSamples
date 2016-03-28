@@ -1,5 +1,3 @@
-"use strict";
-
 import * as React from "react";
 import { CellValue, GameState, playerCell, aiCell } from "./constants"; 
 
@@ -100,7 +98,7 @@ export class Board extends React.Component<void, BoardState> {
             else { 
                 return undefined;
             }
-        }).filter((v) => { return v !== undefined });        
+        }).filter(v => { return v !== undefined });        
     }
     
     // make a move
@@ -110,7 +108,7 @@ export class Board extends React.Component<void, BoardState> {
             let newCells = this.state.cells.slice();
             newCells[pos] = val;
             let oldState = this.state.gameState;
-            this.setState({cells: newCells, gameState: this.checkGameState(newCells, pos, val)}, ()=>{
+            this.setState({cells: newCells, gameState: this.checkGameState(newCells, pos, val)}, () => {
                 if (this.state.gameState !== oldState) {
                     this.handleGameStateChange(this.state.gameState);
                 }
@@ -175,7 +173,8 @@ class Cell extends React.Component<CellProps, void> {
             case 2: 
                 className += " right";
                 break;
-            default: break;             
+            default: 
+                break;             
         }
         return className;
     }
@@ -189,7 +188,7 @@ class Cell extends React.Component<CellProps, void> {
         if (this.props.val === "") {
             name = "";
         }
-        return <div className={this.posToClassName(this.props.pos)} onClick={(e) => this.handleClick(e)}> 
+        return <div className={this.posToClassName(this.props.pos)} onClick={e => this.handleClick(e)}> 
             <div className={name}> {this.props.val} </div>
         </div>
     }

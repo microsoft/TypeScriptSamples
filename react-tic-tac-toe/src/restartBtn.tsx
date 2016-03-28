@@ -1,5 +1,3 @@
-"use strict";
-
 import * as React from "react";
 
 export class RestartBtn extends React.Component<void, void> {
@@ -12,7 +10,7 @@ export class RestartBtn extends React.Component<void, void> {
     }
     
     render() {
-        return <a href="#" className="restartBtn" onClick={(e) => this.handleClick(e)}>
+        return <a href="#" className="restartBtn" onClick={e => this.handleClick(e)}>
             Restart 
         </a>;
     }

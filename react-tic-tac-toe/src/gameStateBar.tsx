@@ -1,5 +1,3 @@
-"use strict";
-
 import * as React from "react";
 import { GameState } from "./constants";
 
@@ -14,7 +12,7 @@ export class GameStateBar extends React.Component<void, GameStateBarState> {
         this.state = {gameState: ""};
     }
     
-    private handleGameStateChange(e : CustomEvent) {
+    private handleGameStateChange(e: CustomEvent) {
         this.setState({gameState: e.detail});
     }
   
@@ -24,12 +22,12 @@ export class GameStateBar extends React.Component<void, GameStateBarState> {
   
     componentDidMount() {
         window.addEventListener("gameStateChange", (e: CustomEvent) => this.handleGameStateChange(e));
-        window.addEventListener("restart", (e) => this.handleRestart(e));
+        window.addEventListener("restart", e => this.handleRestart(e));
     }
 
     componentWillUnmount() {
-        window.removeEventListener("gameStateChange", (e:CustomEvent) => this.handleGameStateChange(e));
-        window.removeEventListener("restart", (e) => this.handleRestart(e));
+        window.removeEventListener("gameStateChange", (e: CustomEvent) => this.handleGameStateChange(e));
+        window.removeEventListener("restart", e => this.handleRestart(e));
     }
     
     render() {
