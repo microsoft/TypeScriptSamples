@@ -7,7 +7,7 @@ class GreeterStore extends FluxStore<GreetingState> {
   constructor(dispatcher: Flux.Dispatcher<Event>) {
     const onDispatch = (action: Event) => {
       if (action instanceof AddGreetingEvent) {
-        const { payload } = action;
+        const {payload} = action;
         this.state.newGreeting = '';
         this.state.greetings = this.state.greetings.concat(payload);
         this.emitChange();
