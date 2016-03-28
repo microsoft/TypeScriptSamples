@@ -1,23 +1,17 @@
-import AppDispatcher from '../dispatcher/AppDispatcher';
-import GreetingActionTypes from '../constants/action-types/GreetingActionTypes';
+import {TypedEvent, AppDispatcher} from '../dispatcher/AppDispatcher';
+
+export class AddGreetingEvent extends TypedEvent<string> {}
+export class NewGreetingChanged extends TypedEvent<string> {}
+export class RemoveGreeting extends TypedEvent<string> {}
 
 export function addGreeting(newGreeting: string) {
-  AppDispatcher.dispatch({
-    newGreeting,
-    type: GreetingActionTypes.ADD_GREETING
-  });
+  AppDispatcher.dispatch(new AddGreetingEvent(newGreeting));
 }
 
 export function newGreetingChanged(newGreeting: string) {
-  AppDispatcher.dispatch({
-    newGreeting,
-    type: GreetingActionTypes.NEW_GREETING_CHANGED
-  });
+  AppDispatcher.dispatch(new NewGreetingChanged(newGreeting));
 }
 
 export function removeGreeting(greetingToRemove: string) {
-  AppDispatcher.dispatch({
-    greetingToRemove,
-    type: GreetingActionTypes.REMOVE_GREETING
-  });
+  AppDispatcher.dispatch(new RemoveGreeting(greetingToRemove));
 }

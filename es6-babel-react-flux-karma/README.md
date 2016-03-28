@@ -1,4 +1,4 @@
-# ES6 + TypeScript + Babel + React + Karma: The Secret Recipe
+# TypeScript, Babel, React, and Karma Sample
 
 ## Getting started
 
@@ -13,7 +13,7 @@ npm run serve
 This will:
 
 1. Download the npm packages you need
-2. Download the type definitions you need.
+2. Download the type definitions from DefinitelyTyped that you need.
 3. Compile the code and serve it up at [http://localhost:8080](http://localhost:8080)
 
 Now you need dev tools.  There's a world of choice out there; there's [Atom](https://atom.io/), there's [VS Code](https://www.visualstudio.com/en-us/products/code-vs.aspx), there's [Sublime](http://www.sublimetext.com/).  There's even something called [Visual Studio](http://www.visualstudio.com).  It's all your choice really.

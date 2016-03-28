@@ -1,36 +1,36 @@
 import FluxStore from './FluxStore';
-import GreetingActionTypes from '../constants/action-types/GreetingActionTypes';
-import AppDispatcher from '../dispatcher/AppDispatcher';
+import {Event, AppDispatcher} from '../dispatcher/AppDispatcher';
 import GreetingState from '../types/GreetingState';
+import { AddGreetingEvent, RemoveGreeting, NewGreetingChanged } from '../actions/GreetingActions';
 
 class GreeterStore extends FluxStore<GreetingState> {
-  constructor(dispatcher) {
-    super(dispatcher, () => ({
+  constructor(dispatcher: Flux.Dispatcher<Event>) {
+    const onDispatch = (action: Event) => {
+      if (action instanceof AddGreetingEvent) {
+        const { payload } = action;
+        this.state.newGreeting = '';
+        this.state.greetings = this.state.greetings.concat(payload);
+        this.emitChange();
+      }
+      else if (action instanceof RemoveGreeting) {
+        const {payload} = action;
+        this.state.greetings = this.state.greetings.filter(g => g !== payload);
+        this.emitChange();
+      }
+      else if (action instanceof NewGreetingChanged) {
+        const {payload} = action;
+        this.state.newGreeting = payload;
+        this.emitChange();
+      }
+    }
+    super(dispatcher, onDispatch, () => ({
       greetings: [],
       newGreeting: ''
     }));
   }
 
   getState() {
-    return this._state
-  }
-
-  _onDispatch(action) {
-    switch(action.type) {
-      case GreetingActionTypes.ADD_GREETING:
-        this._state.newGreeting = '';
-        this._state.greetings = this._state.greetings.concat(action.newGreeting);
-        this.emitChange();
-        break;
-      case GreetingActionTypes.REMOVE_GREETING:
-        this._state.greetings = this._state.greetings.filter(g => g !== action.greetingToRemove);
-        this.emitChange();
-        break;
-      case GreetingActionTypes.NEW_GREETING_CHANGED:
-        this._state.newGreeting = action.newGreeting;
-        this.emitChange();
-        break;
-    }
+    return this.state
   }
 }
 

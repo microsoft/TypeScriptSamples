@@ -1,60 +1,56 @@
 import { EventEmitter } from 'events';
+import { Event } from '../dispatcher/AppDispatcher';
+import * as Flux from "flux";
 
 const CHANGE_EVENT = 'change';
 
 class FluxStore<TState> {
-  _changed: boolean;
-  _emitter: EventEmitter;
-  dispatchToken: string;
-  _dispatcher: Flux.Dispatcher<any>;
-  _cleanStateFn: () => TState;
-  _state: TState;
+  private changed: boolean;
+  private emitter: EventEmitter;
+  private dispatchToken: string;
+  private dispatcher: Flux.Dispatcher<Event>;
+  private cleanStateFn: () => TState;
+  protected state: TState;
 
-  constructor(dispatcher, cleanStateFn) {
-    this._emitter = new EventEmitter();
-    this._changed = false;
-    this._dispatcher = dispatcher;
+  constructor(dispatcher: Flux.Dispatcher<Event>, public onDispatch: (action: Event) => void, cleanStateFn: () => TState) {
+    this.emitter = new EventEmitter();
+    this.changed = false;
+    this.dispatcher = dispatcher;
     this.dispatchToken = dispatcher.register(payload => {
-      this._invokeOnDispatch(payload);
+      this.invokeOnDispatch(payload);
     });
 
-    this._cleanStateFn = cleanStateFn;
-    this._state = this._cleanStateFn();
+    this.cleanStateFn = cleanStateFn;
+    this.state = this.cleanStateFn();
   }
 
   /**
    * Is idempotent per dispatched event
    */
   emitChange() {
-    this._changed = true;
+    this.changed = true;
   }
 
-  hasChanged() { return this._changed; }
+  hasChanged() { return this.changed; }
 
-  addChangeListener(callback) {
-    this._emitter.on(CHANGE_EVENT, callback);
+  addChangeListener(callback: () => void) {
+    this.emitter.on(CHANGE_EVENT, callback);
   }
 
-  removeChangeListener(callback) {
-    this._emitter.removeListener(CHANGE_EVENT, callback);
+  removeChangeListener(callback: () => void) {
+    this.emitter.removeListener(CHANGE_EVENT, callback);
   }
 
-  _cleanState() {
-    this._changed = false;
-    this._state = this._cleanStateFn();
+  protected cleanState() {
+    this.changed = false;
+    this.state = this.cleanStateFn();
   }
 
-  _invokeOnDispatch(payload) {
-    this._changed = false;
-    this._onDispatch(payload);
-    if (this._changed) {
-      this._emitter.emit(CHANGE_EVENT);
-    }
-  }
-
-  _onDispatch(payload) {
-    if (process.env.NODE_ENV !== 'production') {
-      console.error(`${this.constructor.name} has not overridden FluxStore.__onDispatch(), which is required`); // eslint-disable-line no-console
+  private invokeOnDispatch(payload: Event) {
+    this.changed = false;
+    this.onDispatch(payload);
+    if (this.changed) {
+      this.emitter.emit(CHANGE_EVENT);
     }
   }
 }

@@ -9,28 +9,26 @@
     "compilerOptions": {
         "jsx": "preserve",
         "target": "es6",
-        "noImplicitAny": false,
+        "noImplicitAny": true,
         "removeComments": false,
         "preserveConstEnums": true,
         "sourceMap": true
     },
     "files": [
+        "../typings/browser/ambient/react/index.d.ts",
+        "../typings/browser/ambient/react-dom/index.d.ts",
         "../typings/browser/ambient/flux/index.d.ts",
         "../typings/browser/ambient/node/index.d.ts",
-        "../typings/browser/ambient/react-dom/index.d.ts",
-        "../typings/browser/ambient/react/index.d.ts",
         "actions/GreetingActions.ts",
         "components/App.tsx",
         "components/Greeting.tsx",
         "components/WhoToGreet.tsx",
-        "constants/action-types/GreetingActionTypes.ts",
         "dispatcher/AppDispatcher.ts",
         "main.tsx",
         "stores/FluxStore.ts",
         "stores/GreetingStore.ts",
         "types/GreetingState.ts"
     ],
-    "exclude": [],
     "atom": {
         "rewriteTsconfig": true
     }
