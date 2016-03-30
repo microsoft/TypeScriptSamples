@@ -4,11 +4,15 @@
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var eslint = require('gulp-eslint');
+var yargs = require("yargs").argv;
+
 var webpack = require('./gulp/webpack');
 var staticFiles = require('./gulp/staticFiles');
 var tests = require('./gulp/tests');
 var clean = require('./gulp/clean');
 var inject = require('./gulp/inject');
+
+var isDebug = yargs.mode === "Debug";
 
 var lintSrcs = ['./gulp/**/*.js'];
 
@@ -28,8 +32,14 @@ gulp.task('build-other', ['delete-dist', 'build-process.env.NODE_ENV'], function
   staticFiles.build();
 });
 
-gulp.task('build', ['build-js', 'build-other', 'lint'], function () {
-  inject.build();
+gulp.task('build-release', ['build-js', 'build-other', 'lint'], function () {
+    inject.build();
+});
+
+gulp.task('build', isDebug ? [] : ['build-release'], function () {
+    if (isDebug) {
+        gutil.log(gutil.colors.red("In debug mode so not building client side code; your gulp watch task should be running. Type 'npm run watch' at the command prompt in the project directory or run the watch task using Task Runner Explorer. (If using Task Runner Explorer you will need to go to Tools -> Options -> External Web Tools and ensure that $(PATH) is the preferred location to use. You should have npm 3 installed to avoid long path hell.)"));
+    }
 });
 
 gulp.task('lint', function () {
