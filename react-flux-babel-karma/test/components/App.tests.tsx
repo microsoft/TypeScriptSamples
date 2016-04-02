@@ -21,7 +21,7 @@ describe('App', () => {
     );
   });
 
-  function render(state) {
+  function render(state: any) {
     const shallowRenderer = TestUtils.createRenderer();
     spyOn(GreetingStore, 'getState').and.returnValue(state);
 

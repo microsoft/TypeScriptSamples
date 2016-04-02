@@ -5,18 +5,21 @@ import GreetingState from '../types/GreetingState';
 import WhoToGreet from './WhoToGreet';
 import Greeting from './Greeting';
 
-class App extends React.Component<any, GreetingState> {
-  constructor(props) {
+class App extends React.Component<{}, GreetingState> {
+  constructor(props: {}) {
     super(props);
-    this.state = this._getStateFromStores();
+    this.state = this.getStateFromStores();
+  }
+  private onChange = () => {
+    this.setState(this.getStateFromStores());
   }
 
-  componentWillMount() {
-    GreetingStore.addChangeListener(this._onChange);
+  public componentWillMount() {
+    GreetingStore.addChangeListener(this.onChange);
   }
 
-  componentWillUnmount() {
-    GreetingStore.removeChangeListener(this._onChange);
+  public componentWillUnmount() {
+    GreetingStore.removeChangeListener(this.onChange);
   }
 
   render() {
@@ -32,11 +35,7 @@ class App extends React.Component<any, GreetingState> {
     );
   }
 
-  _onChange = () => {
-    this.setState(this._getStateFromStores());
-  }
-
-  _getStateFromStores() {
+  private getStateFromStores() {
     return GreetingStore.getState();
   }
 }

@@ -3,6 +3,7 @@
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var webpack = require('webpack');
+var failPlugin = require('webpack-fail-plugin');
 var WebpackNotifierPlugin = require('webpack-notifier');
 var webpackConfig = require('../webpack.config.js');
 
@@ -14,12 +15,13 @@ function buildProduction(done) {
   myProdConfig.plugins = myProdConfig.plugins.concat(
     new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.[hash].js' }),
     new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.UglifyJsPlugin()
+    new webpack.optimize.UglifyJsPlugin(),
+    failPlugin
   );
 
   // run webpack
   webpack(myProdConfig, function(err, stats) {
-    if(err) { throw new gutil.PluginError('webpack:build', err); }
+    if (err) { throw new gutil.PluginError('webpack:build', err); }
     gutil.log('[webpack:build]', stats.toString({
       colors: true
     }));
@@ -46,7 +48,7 @@ function createDevCompiler() {
 function buildDevelopment(done, devCompiler) {
   // run webpack
   devCompiler.run(function(err, stats) {
-    if(err) { throw new gutil.PluginError('webpack:build-dev', err); }
+    if (err) { throw new gutil.PluginError('webpack:build-dev', err); }
     gutil.log('[webpack:build-dev]', stats.toString({
       chunks: false,
       colors: true

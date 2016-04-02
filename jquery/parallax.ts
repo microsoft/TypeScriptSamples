@@ -10,7 +10,7 @@ module Parallax {
         *   Creates a Container for a Parallax
         *   
         *   @param {HTMLElement} scrollableContent The container that will be parallaxed
-        *   @param {perspective} perspective The ratio of how much back content should be scroleld relative to forward content. For example, if this value is 0.5, and there are 2 surfaces, 
+        *   @param {perspective} perspective The ratio of how much back content should be scrolled relative to forward content. For example, if this value is 0.5, and there are 2 surfaces, 
         *                                    the front-most surface would be scrolled normally, and the surface behind it would be scrolled half as much.
         */
         constructor(scrollableContent: HTMLElement,

@@ -1,37 +1,34 @@
 {
     "compileOnSave": false,
     "filesGlob": [
-        "../typings/**/*.*.ts",
-        "!../typings/jasmine/jasmine.d.ts",
-        "!../typings/react/react-addons-test-utils.d.ts",
+        "../typings/browser/**/*.*.ts",
+        "!../typings/browser/ambient/jasmine/index.d.ts",
+        "!../typings/browser/ambient/react-addons-test-utils/index.d.ts",
         "**/*.{ts,tsx}"
     ],
     "compilerOptions": {
         "jsx": "preserve",
         "target": "es6",
-        "noImplicitAny": false,
+        "noImplicitAny": true,
         "removeComments": false,
         "preserveConstEnums": true,
         "sourceMap": true
     },
     "files": [
-        "../typings/flux/flux.d.ts",
-        "../typings/node/node.d.ts",
-        "../typings/react/react-dom.d.ts",
-        "../typings/react/react.d.ts",
-        "../typings/tsd.d.ts",
+        "../typings/browser/ambient/react/index.d.ts",
+        "../typings/browser/ambient/react-dom/index.d.ts",
+        "../typings/browser/ambient/flux/index.d.ts",
+        "../typings/browser/ambient/node/index.d.ts",
         "actions/GreetingActions.ts",
         "components/App.tsx",
         "components/Greeting.tsx",
         "components/WhoToGreet.tsx",
-        "constants/action-types/GreetingActionTypes.ts",
         "dispatcher/AppDispatcher.ts",
         "main.tsx",
         "stores/FluxStore.ts",
         "stores/GreetingStore.ts",
         "types/GreetingState.ts"
     ],
-    "exclude": [],
     "atom": {
         "rewriteTsconfig": true
     }
