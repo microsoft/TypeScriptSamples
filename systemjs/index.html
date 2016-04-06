@@ -10,7 +10,7 @@
         System.meta['typescript'] = { format: 'global', exports: 'ts' };
         System.paths = {
             '*': '*.ts',
-            'typescript': 'node_modules/typescript/bin/typescript.js'
+            'typescript': 'node_modules/typescript/lib/typescript.js'
         }
         System.import('app').then(function(m) {
             var element = document.getElementById("content");
