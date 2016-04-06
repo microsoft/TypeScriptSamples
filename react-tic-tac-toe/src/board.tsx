@@ -118,17 +118,15 @@ export class Board extends React.Component<void, BoardState> {
             });                 
         }
     }
-    
-    // AI make a random move
-    private aiMove(): void {
-        let emptyCells = this.findAllEmptyCells(this.state.cells);
-        let pos = emptyCells[Math.floor(Math.random() * emptyCells.length)];
-        this.move(pos, aiCell);    
-    }
-    
+
     // handle a new move from player
     private handleNewPlayerMove(pos: number): void {
-        this.move(pos, playerCell, this.aiMove);
+        this.move(pos, playerCell, () => {
+            // AI make a random move following player's move
+            let emptyCells = this.findAllEmptyCells(this.state.cells);
+            let pos = emptyCells[Math.floor(Math.random() * emptyCells.length)];
+            this.move(pos, aiCell);
+        });
     }
    
     render() {
