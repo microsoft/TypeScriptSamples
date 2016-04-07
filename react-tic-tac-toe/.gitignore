@@ -3,3 +3,6 @@ dist
 
 # Node modules
 node_modules
+
+# type definitions
+typings

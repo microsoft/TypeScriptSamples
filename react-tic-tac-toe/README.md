@@ -5,9 +5,10 @@ A game example built using [TypeScript](https://github.com/Microsoft/TypeScript)
 ## Build
 
 ```
-npm install -g typescript webpack
+npm install -g typescript webpack typings
 npm install
 npm link typescript
+typings install
 webpack
 ```
 

@@ -32,6 +32,8 @@
 
 ##### [Raytracer](raytracer/README.md)
 
+##### [React Tic-Tac-Toe](react-tic-tac-toe/README.md)
+
 ##### [Simple](simple/README.md)
 
 ##### [SystemJS](systemjs/README.md)
