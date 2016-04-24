@@ -12,7 +12,7 @@
 
 ##### [D3](d3/README.md)
 
-##### [ES6 + TypeScript + Babel + React + Karma: The Secret Recipe](es6-babel-react-flux-karma/README.md)
+##### [React + Flux + Babel + Karma: The Secret Recipe](react-flux-babel-karma/README.md)
 
 ##### [Greeter](greeter/README.md)
 
