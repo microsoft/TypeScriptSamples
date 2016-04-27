@@ -5,7 +5,7 @@
     "main": "app.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "postinstall": "node_modules/.bin/tsd update",
+        "postinstall": "node_modules/.bin/tsd install",
         "build": "node node_modules/typescript/bin/tsc",
         "run": "node node_modules/http-server/bin/http-server -o"
     },
