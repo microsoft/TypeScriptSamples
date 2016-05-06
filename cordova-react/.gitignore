@@ -10,5 +10,5 @@ bin/
 bld/
 app/*.js
 app/*.map
-
+www/scripts/
 *.user

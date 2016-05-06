@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="vs.mdd.taco.react" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="vs.mdd.taco.react" version="0.0.1" windows-packageVersion="1.1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>React Cordova Demo</name>
     <description>A blank project that uses Apache Cordova to help you build an app that targets multiple mobile platforms: Android, iOS, Windows, and Windows Phone.</description>
     <author email="dev@cordova.apache.org" href="http://cordova.io">Apache Cordova Team</author>
@@ -93,4 +93,11 @@
     <platform name="wp8">
         <splash height="1280" src="res/screens/wp8/SplashScreenImage.png" width="768" />
     </platform>
+    <vs:platformSpecificValues xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps">
+        <vs:platformSpecificWidget platformName="windows">
+        </vs:platformSpecificWidget>
+    </vs:platformSpecificValues>
+    <preference name="WindowsStoreIdentityName" value="33878rido.41823E0AFECA5" />
+    <preference name="WindowsStorePublisherName" value="rido" />
+    <preference name="WindowsStoreDisplayName" value="RidosCorner" />
 </widget>

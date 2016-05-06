@@ -13,10 +13,9 @@
     "ts-loader": "^0.8.1",
     "typescript": "^1.8.7",
     "typings": "^0.8.1",
-    "webpack": ""
+    "webpack": "^1.13.0"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+  "scripts": {  
     "postinstall": "node_modules/.bin/typings install",
     "bundle": "node_modules/.bin/webpack"
   },
