@@ -107,4 +107,7 @@
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="_apacheCordovaProjectSourceItems.Targets" Condition="Exists('_apacheCordovaProjectSourceItems.Targets')" />
+  <Target Name="BeforeBuild">    
+    <Exec Command="npm run bundle" />
+  </Target>
 </Project>
