@@ -1,11 +1,13 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "target": "es5",         
-        "jsx": "react",
-        "noImplicitAny": true,          
-        "inlineSourceMap": true        
-    },
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "jsx": "react",
+    "noImplicitAny": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "outDir": "www/scripts"
+  },
     "files": [
         "./typings/main.d.ts",
         "./app/reddit.ts",
