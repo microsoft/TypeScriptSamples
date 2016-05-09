@@ -4,9 +4,8 @@
     "target": "es5",
     "jsx": "react",
     "noImplicitAny": true,
-    "inlineSourceMap": true,
-    "inlineSources": true,
-    "outDir": "www/scripts"
+    "sourceMap": true
+    
   },
     "files": [
         "./typings/main.d.ts",
