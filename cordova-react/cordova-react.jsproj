@@ -70,7 +70,7 @@
     <Service Include="{4a0dddb5-7a95-4fbf-97cc-616d07737a77}" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <TypeScriptCompileBlocked>false</TypeScriptCompileBlocked>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
     <ProjectGuid>f191e5cb-ce9f-474d-98b3-ea1c47943727</ProjectGuid>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />

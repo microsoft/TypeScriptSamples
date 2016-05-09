@@ -18,6 +18,7 @@ The sample has been tested with Visual Studio 2015, and Visual Studio Code 1.0. 
 - Install [VSCode](https://code.visualstudio.com/)
 - (Optional: Install the VSCode [Cordova Extension](https://marketplace.visualstudio.com/items?itemName=vsmobile.cordova-tools) )
 - From the command line run `npm install`
+- From the command line run `npm run bundle`
 - Add the cordova platform and run `cordova platform add browser && cordova run`
 
 
