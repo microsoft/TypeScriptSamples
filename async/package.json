@@ -1,0 +1,27 @@
+{
+  "name": "ts-node-github-async-sample",
+  "version": "1.0.0",
+  "description": "Sample for Async Functions in NodeJS v4.0.0",
+  "private": true,
+  "main": "lib/github.js",
+  "bin": {
+    "sample": "./bin/ts-async-github-sample"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-typescript": "^2.9.0",
+    "merge2": "^0.3.6",
+    "typescript": "next"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/gulp test"
+  },
+  "author": "Microsoft Corp.",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=4.0.0"
+  }
+}

@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>Jspm sample</title>
+    <script src="jspm_packages/system.src.js"></script>
+    <script src="jspm.config.js"></script>
+</head>
+<body>
+    <div id="content"></div>
+    <script>
+        System.import('app').then(function(m) {
+            var element = document.getElementById("content");
+            m.main(element);
+        });
+    </script>
+</body>
+</html>

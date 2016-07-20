@@ -1,0 +1,20 @@
+{
+  "name": "typescript-angular2",
+  "version": "1.0.0",
+  "description": "Angular 2/TypeScript demo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Microsoft/TypeScriptSamples.git"
+  },
+  "dependencies": {
+    "angular2": "2.0.0-alpha.44",
+    "systemjs": "0.19.5",
+    "http-server": "0.8.0"
+  },
+  "devDependencies": {
+    "typescript": "^1.5.3"
+  },
+  "scripts": {
+    "start": "node node_modules/typescript/lib/tsc.js && node node_modules/http-server/bin/http-server -o"
+  }
+}

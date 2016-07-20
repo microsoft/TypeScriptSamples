@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "module": "commonjs",
+        "target": "es5"
+    },
+    "files": [
+        "app/todo.ts"
+    ]
+}

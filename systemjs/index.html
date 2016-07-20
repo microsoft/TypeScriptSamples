@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>SystemJS/TypeScript Sample</title>
+    <link rel="stylesheet" href="app.css" type="text/css" />
+    <script src="node_modules/systemjs/dist/system.js"></script>
+</head>
+<body>
+    <script>
+        System.transpiler = 'typescript';
+        System.meta['typescript'] = { format: 'global', exports: 'ts' };
+        System.paths = {
+            '*': '*.ts',
+            'typescript': 'node_modules/typescript/lib/typescript.js'
+        }
+        System.import('app').then(function(m) {
+            var element = document.getElementById("content");
+            m.main(element);
+        });
+    </script>
+    <h1>SystemJS/TypeScript Sample</h1>
+    <div id="content"></div>
+</body>
+</html>

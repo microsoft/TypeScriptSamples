@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <title>ng2do</title>
+    <style media="screen">
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.4em;
+            background: #eaeaea url('css/bg.png');
+            color: #4d4d4d;
+            width: 550px;
+            margin: 0 auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-font-smoothing: antialiased;
+            -ms-font-smoothing: antialiased;
+            -o-font-smoothing: antialiased;
+            font-smoothing: antialiased;
+        }
+    </style>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="firebase/firebase.js"></script>
+</head>
+<body>
+    <todo-app>Loading...</todo-app>
+    <script>
+        System.config({
+            packages: {
+                'app': { defaultExtension: 'js'},
+                'firebase': { defaultExtension: 'js'}
+            }
+        });
+        System.import('app/todo');
+    </script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 ///<reference path="Driver.ts"/>
 
-module Mankala {
+namespace Mankala {
     export class Features {
         public turnContinues = false;
         public seedStoredCount = 0;

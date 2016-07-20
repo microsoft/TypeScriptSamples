@@ -1,0 +1,29 @@
+{
+  "jspm": {
+    "dependencies": {
+      "core-js": "npm:core-js@^2.4.0"
+    },
+    "devDependencies": {
+      "os": "github:jspm/nodelibs-os@^0.2.0-alpha",
+      "plugin-typescript": "github:frankwallis/plugin-typescript@^4.0.6"
+    },
+    "peerDependencies": {
+      "fs": "github:jspm/nodelibs-fs@^0.2.0-alpha",
+      "path": "github:jspm/nodelibs-path@^0.2.0-alpha",
+      "process": "github:jspm/nodelibs-process@^0.2.0-alpha"
+    },
+    "overrides": {
+      "npm:typescript@1.8.10": {
+        "browser": {},
+        "map": {
+          "buffer": "@empty",
+          "child_process": "@empty",
+          "fs": "@empty",
+          "path": "@empty",
+          "process": "@empty",
+          "readline": "@empty"
+        }
+      }
+    }
+  }
+}

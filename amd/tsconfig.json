@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "module": "amd",
+        "sourceMap": true
+    },
+    "files": [
+        "app.ts"
+    ]
+}

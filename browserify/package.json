@@ -1,0 +1,21 @@
+{
+    "name": "typescript-browserify",
+    "version": "1.0.0",
+    "description": "Browserify/TypeScript demo",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Microsoft/TypeScriptSamples.git"
+    },
+    "dependencies": {
+        "http-server": "0.8.0"
+    },
+    "devDependencies": {
+        "typescript": "^1.8.9"
+    },
+    "scripts": {
+        "tsc": "node node_modules/typescript/lib/tsc.js",
+        "browserify": "browserify src/app.js -o bundle.js -s app",
+        "listen": "node node_modules/http-server/bin/http-server",
+        "all": "npm run tsc &&  npm run browserify && npm run listen"
+    }
+}

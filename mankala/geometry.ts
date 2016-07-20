@@ -1,6 +1,6 @@
 ///<reference path="Driver.ts"/>
 
-module Mankala {
+namespace Mankala {
     export class Rectangle {
 
         constructor (public x: number, public y: number,

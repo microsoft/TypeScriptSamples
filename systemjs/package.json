@@ -1,0 +1,19 @@
+{
+    "name": "typescript-systemjs",
+    "version": "1.0.0",
+    "description": "SystemJS/TypeScript demo",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Microsoft/TypeScriptSamples.git"
+    },
+    "dependencies": {
+        "http-server": "0.8.0",
+        "systemjs": "0.18.0"
+    },
+    "devDependencies": {
+        "typescript": "^1.5.3"
+    },
+    "scripts": {
+        "start": "node node_modules/http-server/bin/http-server -o"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "jsx": "react",
+        "outDir": "bin",
+        "module": "amd"
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
