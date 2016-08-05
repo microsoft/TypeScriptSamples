@@ -1,5 +1,15 @@
 # TypeScript Samples
 
+Most of the samples here will assume that you have TypeScript installed.
+You can get TypeScript with Visual Studio, NuGet, or with npm:
+
+```shell
+npm install -g typescript
+```
+
+To compile each sample, `cd` into the directory and use the `tsc` command to compile.
+`tsc` will use each directory's `tsconfig.json` to get specific compiler options.
+
 ##### [AMD Modules](amd/README.md)
 
 ##### [Angular Seed TypeScript](angular1/README.md)
