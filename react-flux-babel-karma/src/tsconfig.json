@@ -1,9 +1,9 @@
 {
     "compileOnSave": false,
     "filesGlob": [
-        "../typings/browser/**/*.*.ts",
-        "!../typings/browser/ambient/jasmine/index.d.ts",
-        "!../typings/browser/ambient/react-addons-test-utils/index.d.ts",
+        "../typings/globals/**/*.*.ts",
+        "!../typings/globals/jasmine/index.d.ts",
+        "!../typings/globals/react-addons-test-utils/index.d.ts",
         "**/*.{ts,tsx}"
     ],
     "compilerOptions": {
@@ -15,10 +15,10 @@
         "sourceMap": true
     },
     "files": [
-        "../typings/browser/ambient/react/index.d.ts",
-        "../typings/browser/ambient/react-dom/index.d.ts",
-        "../typings/browser/ambient/flux/index.d.ts",
-        "../typings/browser/ambient/node/index.d.ts",
+        "../typings/globals/react/index.d.ts",
+        "../typings/globals/react-dom/index.d.ts",
+        "../typings/globals/flux/index.d.ts",
+        "../typings/globals/node/index.d.ts",
         "actions/GreetingActions.ts",
         "components/App.tsx",
         "components/Greeting.tsx",
