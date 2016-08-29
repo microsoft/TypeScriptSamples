@@ -2,7 +2,7 @@
     "compileOnSave": false,
     "filesGlob": [
         "**/*.{ts,tsx}",
-        "../typings/browser/**/*.*.ts"
+        "../typings/globals/**/*.*.ts"
     ],
     "compilerOptions": {
         "jsx": "preserve",
@@ -13,12 +13,12 @@
         "sourceMap": true
     },
     "files": [
-        "../typings/browser/ambient/react/index.d.ts",
-        "../typings/browser/ambient/react-dom/index.d.ts",
-        "../typings/browser/ambient/react-addons-test-utils/index.d.ts",
-        "../typings/browser/ambient/flux/index.d.ts",
-        "../typings/browser/ambient/jasmine/index.d.ts",
-        "../typings/browser/ambient/node/index.d.ts",
+        "../typings/globals/react/index.d.ts",
+        "../typings/globals/react-dom/index.d.ts",
+        "../typings/globals/react-addons-test-utils/index.d.ts",
+        "../typings/globals/flux/index.d.ts",
+        "../typings/globals/jasmine/index.d.ts",
+        "../typings/globals/node/index.d.ts",
         "components/App.tests.tsx",
         "components/Greeting.tests.tsx",
         "components/WhoToGreet.tests.tsx",
