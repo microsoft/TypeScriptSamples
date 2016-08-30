@@ -202,6 +202,8 @@ class TodoView extends Backbone.View {
     input: JQuery;
 
     constructor (options? ) {
+        // A call to super() is needed to avoid TS17009.
+        super();
         //... is a list tag.
         this.tagName = "li";
 
