@@ -57,7 +57,7 @@ declare module Backbone {
         toJSON(): any;
     }
     export class Collection<T> {
-        constructor (models? , opts? );
+        constructor (models?, opts?);
         bind(ev: string, f: Function, ctx?: any): void;
         length: number;
         create(attrs, opts? ): any;
@@ -69,7 +69,7 @@ declare module Backbone {
         without(...values: T[]): T[];
     }
     export class View {
-        constructor (options? );
+        constructor (options?);
         $(selector: string): JQuery;
         el: HTMLElement;
         $el: JQuery;
@@ -201,9 +201,8 @@ class TodoView extends Backbone.View {
     model: Todo;
     input: JQuery;
 
-    constructor (options? ) {
-        // A call to super() is needed to avoid TS17009.
-        super();
+    constructor (options?) {
+        super(options);
         //... is a list tag.
         this.tagName = "li";
 
@@ -215,8 +214,6 @@ class TodoView extends Backbone.View {
             "keypress .todo-input": "updateOnEnter",
             "blur .todo-input": "close"
         };
-
-        super(options);
 
         // Cache the template function for a single item.
         this.template = _.template($('#item-template').html());
