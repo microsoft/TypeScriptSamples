@@ -1,2 +1,4 @@
-todo.js
+.DS_Store
 node_modules
+app/**/*.js
+app/**/*.map

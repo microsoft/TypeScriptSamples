@@ -10,12 +10,19 @@ npm start
 
 **Build**
 ```
-node node_modules/typescript/lib/tsc.js
+npm run build
 ```
 
 **Run server**
+
 ```
-node node_modules/http-server/bin/http-server -p 8080
+npm run server
+```
+
+or
+
+```
+./node_modules/.bin/http-server -p 8080
 ```
 
 '-p' sets the port to use, default port is 8080. If it is taken pick any port that is free. 
