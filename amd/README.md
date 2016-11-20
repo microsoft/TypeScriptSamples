@@ -9,6 +9,6 @@ It uses [require.js](http://www.requirejs.org/) to load `app.js` once compiled f
 
 ```
 tsc --sourcemap --module amd app.ts
-start default.htm
+start default.html
 ```
 
