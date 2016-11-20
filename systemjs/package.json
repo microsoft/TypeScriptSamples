@@ -7,7 +7,7 @@
         "url": "https://github.com/Microsoft/TypeScriptSamples.git"
     },
     "dependencies": {
-        "http-server": "0.8.0",
+        "http-server": "0.9.0",
         "systemjs": "0.18.0"
     },
     "devDependencies": {
