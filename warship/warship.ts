@@ -28,6 +28,7 @@ class Ship {
     isVertical = true;
     hits = 0;
     element: HTMLElement;
+    cells: Cell[];
 
     constructor(public size: number) {
         this.element = $("<div class='ship'></div>")[0];
@@ -185,6 +186,13 @@ class Board {
         }
     }
 
+    markShipBombed(ship: Ship) {
+        for (var i = 0; i < ship.size; i++) {
+            $(ship.cells[i].element).removeClass("cellHit");
+            $(ship.cells[i].element).addClass("cellShipHit");
+        }
+    }
+
     bombCell(cellElem: HTMLElement) {
         var cellPos = Cell.parseCellLocation($(cellElem).data("cellLocation"));
         var cell = this.cells[cellPos.row][cellPos.column];
@@ -199,6 +207,7 @@ class Board {
             var ship = this.ships[cell.shipIndex];
             ship.hits++;
             if (ship.isSunk()) {
+                this.markShipBombed(ship);
                 if (this.allShipsSunk()) {
                     this.onEvent.call(this, 'allSunk');
                 } else {
@@ -266,14 +275,16 @@ class Board {
             var ship = this.ships[index]
             ship.hits = 0;
             var cells = ship.getCellsCovered();
+            ship.cells = []
             for (var cell = 0; cell < cells.length; cell++) {
                 var cellPos = Cell.parseCellLocation(cells[cell]);
                 var targetCell = this.cells[cellPos.row][cellPos.column];
                 targetCell.shipIndex = index;
+                ship.cells.push(targetCell);
             }
         }
 
-        $(this.element).children(".cell").removeClass("cellHit cellMiss").addClass("notBombed");
+        $(this.element).children(".cell").removeClass("cellHit cellMiss cellShipHit").addClass("notBombed");
     }
 
     private allShipsSunk() {
