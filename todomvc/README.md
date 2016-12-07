@@ -18,7 +18,7 @@ start index.html
 ## Caveats
 
 ```
-This sample uses local storage and will not run properly on Internet Explore if run 
+This sample uses local storage and will not run properly on Internet Explorer if run 
 from the local filesystem.  Instead, host the sample from a web server (eg. IIS).
 
 
