@@ -4,6 +4,7 @@
   "description": "ES6 + TypeScript + Babel + React + Karma: The Secret Recipe",
   "main": "index.js",
   "scripts": {
+    "clean": "gulp delete-dist",
     "test": "karma start --reporters mocha,junit --single-run --browsers PhantomJS",
     "serve": "gulp watch-and-serve",
     "watch": "gulp watch",
@@ -67,6 +68,7 @@
     "typescript": "^1.8.0",
     "webpack": "^1.12.2",
     "webpack-fail-plugin": "^1.0.4",
-    "webpack-notifier": "^1.2.1"
+    "webpack-notifier": "^1.2.1",
+    "yargs": "^4.1.0"
   }
 }
