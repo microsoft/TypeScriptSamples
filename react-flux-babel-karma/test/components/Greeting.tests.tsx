@@ -1,5 +1,6 @@
-import * as React from 'react';
-import * as TestUtils from 'react-addons-test-utils';
+import React from 'react';
+import TestUtils from 'react-addons-test-utils';
+
 import Greeting from '../../src/components/Greeting';
 import * as GreetingActions from '../../src/actions/GreetingActions';
 
@@ -36,7 +37,7 @@ describe('Greeting', () => {
     expect(GreetingActions.removeGreeting).toHaveBeenCalledWith(targetOfGreeting);
   });
 
-  function render({ targetOfGreeting }) {
+  function render({ targetOfGreeting }: { targetOfGreeting: string; }) {
     const shallowRenderer = TestUtils.createRenderer();
     shallowRenderer.render(<Greeting key={ 0 } targetOfGreeting={ targetOfGreeting } />);
     return shallowRenderer.getRenderOutput();

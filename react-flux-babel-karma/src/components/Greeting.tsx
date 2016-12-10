@@ -1,4 +1,5 @@
-import * as React from 'react';
+import React from 'react';
+
 import * as GreetingActions from '../actions/GreetingActions';
 
 interface Props {
@@ -28,7 +29,7 @@ class Greeting extends React.Component<Props, any> {
     );
   }
 
-  _onClick = (event: React.MouseEvent) => {
+  _onClick = (_event: React.MouseEvent<HTMLButtonElement>) => {
     GreetingActions.removeGreeting(this.props.targetOfGreeting);
   }
 }

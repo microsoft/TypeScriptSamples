@@ -2,19 +2,17 @@
 
 ## Getting started
 
-You'll need [node / npm](https://nodejs.org/) and [Typings](https://github.com/typings/typings) installed globally.  To get up and running just enter:
+You'll need [node / npm](https://nodejs.org/) installed.  To get up and running just enter:
 
 ```
 npm install
-typings install
 npm run serve
 ```
 
 This will:
 
-1. Download the npm packages you need
-2. Download the type definitions from DefinitelyTyped that you need.
-3. Compile the code and serve it up at [http://localhost:8080](http://localhost:8080)
+1. Download the npm packages you need (including the type definitions from DefinitelyTyped)
+2. Compile the code and serve it up at [http://localhost:8080](http://localhost:8080)
 
 Now you need dev tools.  There's a world of choice out there; there's [Atom](https://atom.io/), there's [VS Code](https://www.visualstudio.com/en-us/products/code-vs.aspx), there's [Sublime](http://www.sublimetext.com/).  There's even something called [Visual Studio](http://www.visualstudio.com).  It's all your choice really.
 

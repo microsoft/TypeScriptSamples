@@ -1,4 +1,4 @@
-import { EventEmitter } from 'events';
+import { EventEmitter } from 'fbemitter';
 import { Event } from '../dispatcher/AppDispatcher';
 import * as Flux from "flux";
 
@@ -34,14 +34,10 @@ class FluxStore<TState> {
   hasChanged() { return this.changed; }
 
   addChangeListener(callback: () => void) {
-    this.emitter.on(CHANGE_EVENT, callback);
+    return this.emitter.addListener(CHANGE_EVENT, callback);
   }
 
-  removeChangeListener(callback: () => void) {
-    this.emitter.removeListener(CHANGE_EVENT, callback);
-  }
-
-  protected cleanState() {
+  public cleanState() {
     this.changed = false;
     this.state = this.cleanStateFn();
   }

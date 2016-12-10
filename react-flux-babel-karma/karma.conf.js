@@ -9,9 +9,9 @@ module.exports = function(config) {
     browsers: [ 'PhantomJS' ],
 
     files: [
-      'test/import-babel-polyfill.js', // This ensures we have the es6 shims in place from babel
-      'test/**/*.tests.ts',
-      'test/**/*.tests.tsx'
+      // This ensures we have the es6 shims in place from babel and that angular and angular-mocks are loaded
+      // and then loads all the tests
+      'test/main.js'
     ],
 
     port: 9876,
@@ -21,13 +21,11 @@ module.exports = function(config) {
     logLevel: config.LOG_INFO, //config.LOG_DEBUG
 
     preprocessors: {
-      'test/import-babel-polyfill.js': [ 'webpack', 'sourcemap' ],
-      'src/**/*.{ts,tsx}': [ 'webpack', 'sourcemap' ],
-      'test/**/*.tests.{ts,tsx}': [ 'webpack', 'sourcemap' ]
+      'test/main.js': [ 'webpack', 'sourcemap' ]
     },
 
     webpack: {
-      devtool: 'eval-source-map', //'inline-source-map',
+      devtool: 'inline-source-map',
       debug: true,
       module: webpackConfig.module,
       resolve: webpackConfig.resolve

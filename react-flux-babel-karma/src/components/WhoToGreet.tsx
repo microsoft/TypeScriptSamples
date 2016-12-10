@@ -1,4 +1,5 @@
-import * as React from 'react';
+import React from 'react';
+
 import * as GreetingActions from '../actions/GreetingActions';
 
 interface Props {
@@ -35,12 +36,12 @@ class WhoToGreet extends React.Component<Props, any> {
     return !this.props.newGreeting;
   }
 
-  _handleNewGreetingChange = (event: React.FormEvent) => {
+  _handleNewGreetingChange = (event: React.FormEvent<HTMLInputElement>) => {
     const newGreeting = (event.target as HTMLInputElement).value;
     GreetingActions.newGreetingChanged(newGreeting);
   }
 
-  _onSubmit = (event: React.FormEvent) => {
+  _onSubmit = (event: React.FormEvent<HTMLButtonElement>) => {
     event.preventDefault();
 
     if (!this._preventSubmission) {
