@@ -23,13 +23,13 @@ module.exports = {
     loaders: [{
       test: /\.ts(x?)$/,
       exclude: /node_modules/,
-      loader: 'babel-loader?presets[]=es2015&presets[]=react!ts-loader'
+      loader: 'babel-loader?presets[]=es2016&presets[]=es2015&presets[]=react!ts-loader'
     }, {
       test: /\.js$/,
       exclude: /node_modules/,
       loader: 'babel',
       query: {
-        presets: ['es2015', 'react']
+        presets: ['es2016', 'es2015', 'react']
       }
     }]
   },
@@ -37,6 +37,6 @@ module.exports = {
   ],
   resolve: {
     // Add `.ts` and `.tsx` as a resolvable extension.
-    extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']
+    extensions: ['', '.ts', '.tsx', '.js']
   },
 };
