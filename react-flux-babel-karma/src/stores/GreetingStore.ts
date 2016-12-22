@@ -4,7 +4,7 @@ import GreetingState from '../types/GreetingState';
 import { AddGreetingEvent, RemoveGreeting, NewGreetingChanged } from '../actions/GreetingActions';
 
 class GreeterStore extends FluxStore<GreetingState> {
-  constructor(dispatcher: Flux.Dispatcher<Event>) {
+  constructor(dispatcher: typeof AppDispatcher) {
     const onDispatch = (action: Event) => {
       if (action instanceof AddGreetingEvent) {
         const {payload} = action;

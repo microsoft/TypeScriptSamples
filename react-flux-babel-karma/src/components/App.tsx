@@ -1,11 +1,13 @@
-import * as React from 'react';
+import React from 'react';
+import FBEmitter from "fbemitter";
+
 import GreetingStore from '../stores/GreetingStore';
-import * as GreetingActions from '../actions/GreetingActions';
 import GreetingState from '../types/GreetingState';
 import WhoToGreet from './WhoToGreet';
 import Greeting from './Greeting';
 
 class App extends React.Component<{}, GreetingState> {
+  eventSubscription: FBEmitter.EventSubscription;
   constructor(props: {}) {
     super(props);
     this.state = this.getStateFromStores();
@@ -15,11 +17,11 @@ class App extends React.Component<{}, GreetingState> {
   }
 
   public componentWillMount() {
-    GreetingStore.addChangeListener(this.onChange);
+    this.eventSubscription = GreetingStore.addChangeListener(this.onChange);
   }
 
   public componentWillUnmount() {
-    GreetingStore.removeChangeListener(this.onChange);
+    this.eventSubscription.remove();
   }
 
   render() {

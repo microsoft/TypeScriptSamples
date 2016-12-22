@@ -6,6 +6,6 @@ export class TypedEvent<P> {
 
 export type Event = TypedEvent<any>;
 
-const dispatcherInstance: Flux.Dispatcher<Event> = new Dispatcher();
+const dispatcherInstance: Dispatcher<Event> = new Dispatcher();
 
 export { dispatcherInstance as AppDispatcher };

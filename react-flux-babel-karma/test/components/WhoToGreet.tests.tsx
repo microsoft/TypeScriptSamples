@@ -1,5 +1,6 @@
-import * as React from 'react';
-import * as TestUtils from 'react-addons-test-utils';
+import React from 'react';
+import TestUtils from 'react-addons-test-utils';
+
 import WhoToGreet from '../../src/components/WhoToGreet';
 import * as GreetingActions from '../../src/actions/GreetingActions';
 
@@ -59,7 +60,7 @@ describe('WhoToGreet', () => {
     expect(GreetingActions.addGreeting).toHaveBeenCalledWith(newGreeting);
   });
 
-  function render({ newGreeting }) {
+  function render({ newGreeting }: { newGreeting: string }) {
     const shallowRenderer = TestUtils.createRenderer();
     shallowRenderer.render(<WhoToGreet newGreeting={ newGreeting } />);
     return shallowRenderer.getRenderOutput();
