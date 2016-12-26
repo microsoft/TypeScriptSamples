@@ -7,7 +7,7 @@
 <body>
     <div id="content"></div>
     <script>
-        System.import('app').then(function(m) {
+        SystemJS.import("app").then(function(m) {
             var element = document.getElementById("content");
             m.main(element);
         });
