@@ -10,6 +10,6 @@ For best results, scroll the window using the scrollbar.
 
 ## Running
 ```
-tsc --sourcemap --target ES5 parallax.ts
-start parallax.html
+npm run start
+open parallax.html
 ```

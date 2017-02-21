@@ -1,5 +1,3 @@
-/// <reference path="jquery.d.ts" />
-
 module Parallax {
     export class ParallaxContainer {
         private content: HTMLElement;
