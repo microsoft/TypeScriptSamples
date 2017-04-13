@@ -16,15 +16,11 @@ gulp.task('delete-dist', function (done) {
   clean.run(done);
 });
 
-gulp.task('build-process.env.NODE_ENV', function () {
-  process.env.NODE_ENV = 'production';
-});
-
-gulp.task('build-js', ['delete-dist', 'build-process.env.NODE_ENV'], function(done) {
+gulp.task('build-js', ['delete-dist'], function(done) {
   webpack.build().then(function() { done(); });
 });
 
-gulp.task('build-other', ['delete-dist', 'build-process.env.NODE_ENV'], function() {
+gulp.task('build-other', ['delete-dist'], function() {
   staticFiles.build();
 });
 
