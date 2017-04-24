@@ -3,6 +3,20 @@
 
 var path = require('path');
 
+
+var babelOptions = {
+  "presets": [
+    "react",
+    [
+      "es2015",
+      {
+        "modules": false
+      }
+    ],
+    "es2016"
+  ]
+};
+
 module.exports = {
   cache: true,
   entry: {
@@ -10,8 +24,10 @@ module.exports = {
     vendor: [
       'babel-polyfill',
       'events',
+      'fbemitter',
       'flux',
-      'react'
+      'react',
+      'react-dom'
     ]
   },
   output: {
@@ -20,23 +36,32 @@ module.exports = {
     chunkFilename: '[chunkhash].js'
   },
   module: {
-    loaders: [{
+    rules: [{
       test: /\.ts(x?)$/,
       exclude: /node_modules/,
-      loader: 'babel-loader?presets[]=es2016&presets[]=es2015&presets[]=react!ts-loader'
+      use: [
+        {
+          loader: 'babel-loader',
+          options: babelOptions
+        },
+        {
+          loader: 'ts-loader'
+        }
+      ]
     }, {
       test: /\.js$/,
       exclude: /node_modules/,
-      loader: 'babel',
-      query: {
-        presets: ['es2016', 'es2015', 'react']
-      }
+      use: [
+        {
+          loader: 'babel-loader',
+          options: babelOptions
+        }
+      ]
     }]
   },
   plugins: [
   ],
   resolve: {
-    // Add `.ts` and `.tsx` as a resolvable extension.
-    extensions: ['', '.ts', '.tsx', '.js']
+    extensions: ['.ts', '.tsx', '.js']
   },
 };
