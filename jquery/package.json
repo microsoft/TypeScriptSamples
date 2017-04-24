@@ -1,0 +1,18 @@
+{
+  "name": "jquery",
+  "version": "1.0.0",
+  "description": "jQuery Typescript Demo",
+  "scripts":{
+    "tsc": "tsc"
+  },
+  "dependencies": {
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "@types/jquery": "^2.0.40",
+    "typescript": "^2.1.6"
+  },
+  "type": "git",
+  "url": "https://github.com/Microsoft/TypeScriptSamples.git",
+  "license": "MIT"
+}
