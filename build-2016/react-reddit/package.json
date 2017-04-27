@@ -1,0 +1,21 @@
+{
+  "name": "react-reddit-reader",
+  "version": "1.0.0",
+  "description": "A small web app in React that queries Reddit for submissions.",
+  "main": "index.js",
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
+  },
+  "devDependencies": {
+    "source-map-loader": "^0.1.5",
+    "ts-loader": "^0.8.1",
+    "typescript": "^1.8.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Rosenwasser",
+  "license": "Apache-2.0"
+}

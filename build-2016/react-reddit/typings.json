@@ -1,0 +1,7 @@
+{
+  "ambientDependencies": {
+    "jquery": "registry:dt/jquery#2.0.0+20160303223636",
+    "react": "registry:dt/react#0.14.0+20160302224448",
+    "react-dom": "registry:dt/react-dom#0.0.0+20151118193745"
+  }
+}

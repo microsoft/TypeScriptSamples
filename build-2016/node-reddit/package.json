@@ -1,0 +1,19 @@
+{
+  "name": "reddit-node-query",
+  "version": "1.0.0",
+  "description": "A small server using 'express' and 'request' to query reddit.",
+  "dependencies": {
+    "express": "^4.13.4",
+    "request": "^2.69.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node built/server.js"
+  },
+  "keywords": [
+    "typescript",
+    ""
+  ],
+  "author": "Daniel Rosenwasser",
+  "license": "Apache-2.0"
+}

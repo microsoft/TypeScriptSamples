@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="entry" style="font-family:sans-serif" *ngFor="#entry of feedData | async; #i = index">
+    <br *ngIf="i > 0" />
+    <span class="title" style="font-size:1.2rem">
+      <span>{{i + 1}}. </span>
+      <a href={{entry.url}}>{{entry.title}}</a>
+    </span>
+    <span> ({{entry.domain}})</span>
+    <div>Submitted at {{entry.created_utc * 1000 | date:"mediumTime"}}.</div>
+  </div>
+</div>
