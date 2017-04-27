@@ -84,6 +84,12 @@ body {
     z-index: 2;
 }
 
+.cellShipHit {
+    opacity: 0.5;
+    background-color: #00CC00;
+    z-index: 2;
+}
+
 .cellMiss{
     opacity: 0.5;
     background-color: #008000;
