@@ -10,11 +10,11 @@ npm install
 
 ## Compile
 ```
-node node_modules/typescript/bin/tsc
+npm run build
 ```
 
 ## Start http server
 ```
-node node_modules/http-server/bin/http-server -o
+npm start
 ```
 

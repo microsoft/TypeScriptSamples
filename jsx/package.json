@@ -5,9 +5,8 @@
     "main": "app.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "postinstall": "node_modules/.bin/tsd install",
         "build": "node node_modules/typescript/bin/tsc",
-        "run": "node node_modules/http-server/bin/http-server -o"
+        "start": "node node_modules/http-server/bin/http-server -o"
     },
     "repository": {
         "type": "git",
@@ -29,11 +28,14 @@
     "devDependencies": {
         "typescript": "latest",
         "http-server": "0.8.0",
-        "tsd":  "latest"
+        "@types/jquery": "^2",
+        "@types/react-dom": "^15",
+        "@types/react": "^15"
     },
     "dependencies": {
         "jquery": "^2.1.4",
-        "react": "^0.13.3",
+        "react": "^15.6.1",
+        "react-dom": "^15.6.1",
         "requirejs": "^2.1.20"
     }
 }
