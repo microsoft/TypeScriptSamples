@@ -244,7 +244,7 @@ class RayTracer {
                 var color = this.traceRay({ start: scene.camera.pos, dir: getPoint(x, y, scene.camera) }, scene, 0);
                 var c = Color.toDrawingColor(color);
                 ctx.fillStyle = "rgb(" + String(c.r) + ", " + String(c.g) + ", " + String(c.b) + ")";
-                ctx.fillRect(x, y, x + 1, y + 1);
+                ctx.fillRect(x, y, 1, 1);
             }
         }
     }
