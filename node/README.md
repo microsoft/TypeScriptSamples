@@ -1,18 +1,55 @@
 # TypeScript Sample: Node.js 
+## Overview
 
-## Overview 
+This sample implements a very basic [node.js](https://nodejs.org/) application using TypeScript.
 
-This sample implements a very basic node.js application using TypeScript
-
-## Running 
-For HttpServer
-```
-tsc --sourcemap --module commonjs HttpServer.ts
-node HttpServer.js
+## Running
+First of all, install all dependencies with:
+```bash
+npm install
 ```
 
-For TcpServer
+Then, you can run each of the listed [examples](#examples) with the following command:
+```bash
+npm run example ts example-name
 ```
-tsc --sourcemap --module commonjs TcpServer.ts
-node TcpServer.js
+
+To run the HTTPS server example, just:
+```bash
+npm run example ts HttpsServer
+```
+
+Under the hood, this examples are running through [ts-node](https://github.com/TypeStrong/ts-node), which is not recommended in production environments. You can also build those examples with:
+```bash
+npm run build
+```
+
+And then running the compiled JavaScript (JS) example file with:
+```bash
+npm run example js example-name
+```
+
+Or even trough node directly:
+```bash
+node ./dist/example-name.js
+```
+
+## Examples
+* [TcpServer](./src/TcpServer.ts) - a simple TCP server
+* [HttpsServer](./src/HttpsServer.ts) - a simple HTTPS server
+* [API Client](./src/APIClient.ts) - client that sends a "ping"
+* [API Server](./src/APIServer.ts) - server the receives that "ping" and responds with a "pong"
+
+**note**: due to HTTP/HTTPS distinct way of handle localhost requests, in the API example, HTTP is used instead of HTTPS because is a more simple way to set it up.
+
+## Standards
+A modified version of the [Microsoft Linter Standards](https://github.com/Microsoft/tslint-microsoft-contrib) is used. Please be mindful that they are here to help you out improve you code.
+
+## Git Hooks
+Due to [Husky](https://github.com/typicode/husky) integration, before any push to this Github repository, [TSLint](https://github.com/palantir/tslint) will run and then point out all the fixes that needs to be done to follow the set of code [standards](#standards); if nothing needs to be corrected, you then can push it :)
+
+## Tests
+Tests are a resourceful tool to add it, they serve as examples and also as guarantee that your code is doing what needs to be bone. [TDD](https://en.wikipedia.org/wiki/Test-driven_development) is a great example of this.
+```bash
+npm test
 ```
