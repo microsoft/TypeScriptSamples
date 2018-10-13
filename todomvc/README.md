@@ -11,8 +11,8 @@ TypeScript integration points are highlighted:
 
 ## Running
 ```
-tsc --sourcemap js\todos.ts
-start index.html
+npm install
+npm start
 ```
 
 ## Caveats
