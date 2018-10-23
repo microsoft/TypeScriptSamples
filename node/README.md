@@ -16,7 +16,7 @@ npm run example ts example-name
 
 To run the HTTPS server example, just:
 ```bash
-npm run example ts HttpsServer
+npm run example ts HttpServer
 ```
 
 Under the hood, this examples are running through [ts-node](https://github.com/TypeStrong/ts-node), which is not recommended in production environments. You can also build those examples with:
@@ -36,11 +36,14 @@ node ./dist/example-name.js
 
 ## Examples
 * [TcpServer](./src/TcpServer.ts) - a simple TCP server
-* [HttpsServer](./src/HttpsServer.ts) - a simple HTTPS server
+* [HttpServer](./src/HttpServer.ts) - a simple HTTPS server
 * [API Client](./src/APIClient.ts) - client that sends a "ping"
 * [API Server](./src/APIServer.ts) - server the receives that "ping" and responds with a "pong"
+* [Word counter](./src/WordCounter.ts) - shows how many of the desired words are presented in a file
+* [Wikipedia Search](./src/Wikipedia.ts) - searches the [Wikipedia](https://en.wikipedia.org/w/api.php?) website
+* [Web Scrapping](./src/WebScrapping.ts) - make a web scrapping in the [webscraper.io](https://www.webscraper.io/test-sites/e-commerce/static), pagination included
 
-**note**: due to HTTP/HTTPS distinct way of handle localhost requests, in the API example, HTTP is used instead of HTTPS because is a more simple way to set it up.
+**note**: due to HTTP/HTTPS distinct way of handle localhost requests, in the examples HTTP is used instead of HTTPS because is a more easy way to set it up.
 
 ## Standards
 A modified version of the [Microsoft Linter Standards](https://github.com/Microsoft/tslint-microsoft-contrib) is used. Please be mindful that they are here to help you out improve you code.

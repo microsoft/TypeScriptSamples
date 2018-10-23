@@ -7,7 +7,7 @@ const server = createServer((sent: IncomingMessage, res: ServerResponse) => {
     const body = <Buffer[]> [];
 
     sent.on('data', (data: Buffer) => body.push(data));
-    sent.on('error', (err) => console.error(err));
+    sent.on('error', (err) => { console.error(err); });
     sent.on('end', () => {
         const message = Buffer.concat(body).toString();
 
@@ -18,4 +18,4 @@ const server = createServer((sent: IncomingMessage, res: ServerResponse) => {
     res.end('pong');
 });
 
-server.listen(8080, 'localhost', () => console.table('Server running at https://localhost:8080/'));
+server.listen(8080, 'localhost', () => { console.log('Server running at https://localhost:8080/'); });

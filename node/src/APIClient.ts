@@ -15,10 +15,10 @@ const handleResponse = (resolve: (data: string) => void, reject: (data: Error) =
             .on('error', reject)
             .on('uncaughtException', reject)
             .on('data', (data: string) => chunk += data)
-            .on('end', () => resolve(chunk));
+            .on('end', () => { resolve(chunk); });
 };
 
-const ping = (): Promise<string> => new Promise((resolve: (data: string) => void, reject: (data: Error) => void) => {
+const ping = async (): Promise<string> => new Promise((resolve: (data: string) => void, reject: (data: Error) => void) => {
     const post = request({
         path: '/',
         port: 8080,
@@ -28,11 +28,11 @@ const ping = (): Promise<string> => new Promise((resolve: (data: string) => void
             'Content-Type': 'text/plain'
         }
     });
-    const curriedHandleResponse = ((response: IncomingMessage) => handleResponse(resolve, reject, response));
+    const curriedHandleResponse = ((response: IncomingMessage) => { handleResponse(resolve, reject, response); });
 
     post.write('ping');
     post.on('response', curriedHandleResponse);
-    post.on('error', () => reject(new Error('Request error')));
+    post.on('error', () => { reject(new Error('Request error')); });
     post.end();
 });
 

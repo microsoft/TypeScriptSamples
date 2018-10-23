@@ -3,9 +3,12 @@
  */
 import { createServer, Socket } from 'net';
 
+const host = 'localhost';
+const port = 1337;
+
 const server = createServer((socket: Socket) => {
     socket.write('Echo server\r\n');
     socket.pipe(socket);
 });
 
-server.listen(1337, '127.0.0.1', () => console.log('Server running at http://127.0.0.1:1337/'));
+server.listen(port, host, () => { console.log(`Server running at ${host}:${port}`); });
