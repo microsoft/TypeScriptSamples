@@ -9,27 +9,22 @@ First of all, install all dependencies with:
 npm install
 ```
 
-Then, you can run each of the listed [examples](#examples) with the following command:
+Then, you can run each of the listed [examples](#examples) with the following command from the this project root folder:
 ```bash
-npm run example ts example-name
+ts-node ./examples/example-name.ts
 ```
 
 To run the HTTPS server example, just:
 ```bash
-npm run example ts HttpServer
+ts-node ./examples/HttpServer.ts
 ```
 
-Under the hood, this examples are running through [ts-node](https://github.com/TypeStrong/ts-node), which is not recommended in production environments. You can also build those examples with:
+This examples are running through [ts-node](https://github.com/TypeStrong/ts-node), which is not recommended in production environments. You can also build those examples with:
 ```bash
 npm run build
 ```
 
 And then running the compiled JavaScript (JS) example file with:
-```bash
-npm run example js example-name
-```
-
-Or even trough node directly:
 ```bash
 node ./dist/example-name.js
 ```
@@ -50,9 +45,3 @@ A modified version of the [Microsoft Linter Standards](https://github.com/Micros
 
 ## Git Hooks
 Due to [Husky](https://github.com/typicode/husky) integration, before any push to this Github repository, [TSLint](https://github.com/palantir/tslint) will run and then point out all the fixes that needs to be done to follow the set of code [standards](#standards); if nothing needs to be corrected, you then can push it :)
-
-## Tests
-Tests are a resourceful tool to add it, they serve as examples and also as guarantee that your code is doing what needs to be bone. [TDD](https://en.wikipedia.org/wiki/Test-driven_development) is a great example of this.
-```bash
-npm test
-```

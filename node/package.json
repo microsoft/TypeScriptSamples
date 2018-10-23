@@ -4,9 +4,7 @@
   "description": "Node examples using TypeScript",
   "scripts": {
     "build": "tsc",
-    "example": "ts-node ./index.ts",
-    "lint": "tslint --config tslint.json --project .",
-    "test": "jest --config jest.config.json --ci --runInBand --detectOpenHandles --forceExit --no-cache"
+    "lint": "tslint --config tslint.json --project ."
   },
   "contributors": [
     {
