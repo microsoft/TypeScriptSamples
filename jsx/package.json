@@ -28,12 +28,10 @@
     "devDependencies": {
         "typescript": "latest",
         "http-server": "0.8.0",
-        "@types/jquery": "^2",
         "@types/react-dom": "^15",
         "@types/react": "^15"
     },
     "dependencies": {
-        "jquery": "^3.3.1",
         "react": "^15.6.1",
         "react-dom": "^15.6.1",
         "requirejs": "^2.1.20"
