@@ -2,8 +2,8 @@
 import { Formatter } from './format.js'; 
 
 interface Robot {
-  name: String,
-  currentComputation: Number
+  name: String;
+  currentComputation: Number;
 }
 
 class Robot {
@@ -18,13 +18,19 @@ class Robot {
     let computedValue = 0;
     switch(operation) {
       case '+':
-        computedValue = value + 10
+        computedValue = value + 10;
+        break;
       case '-':
-        computedValue = value - 10
+        computedValue = value - 10;
+        break;
       case '/':
-        computedValue = value / 10
+        computedValue = value / 10;
+        break;
       case '*':
-        computedValue = value * 10 
+        computedValue = value * 10;
+        break;
+      default:
+        console.log("Does not compute!!")
     } 
     this.currentComputation = computedValue;
   }
