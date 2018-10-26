@@ -1,19 +1,14 @@
 'use strict';
 
-class View1Controller{
-    static $inject = [];
-    constructor(){
-
-    }
+class View1Controller {
+  static $inject = [];
 }
 
 angular.module('myApp.view1', ['ngRoute'])
-
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {
-    templateUrl: 'view1/view1.html',
-    controller: 'View1Ctrl'
-  });
-}])
-
-.controller('View1Ctrl', View1Controller);
+  .config(['$routeProvider', $routeProvider => {
+    $routeProvider.when('/view1', {
+      templateUrl: 'view1/view1.html',
+      controller: 'View1Ctrl'
+    });
+  }])
+  .controller('View1Ctrl', View1Controller);

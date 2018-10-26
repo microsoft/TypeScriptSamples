@@ -1,14 +1,14 @@
 'use strict';
 
-describe('myApp.version module', function() {
+describe('myApp.version module', () => {
   beforeEach(module('myApp.version'));
 
-  describe('interpolate filter', function() {
-    beforeEach(module(function($provide) {
+  describe('interpolate filter', () => {
+    beforeEach(module($provide => {
       $provide.value('version', 'TEST_VER');
     }));
 
-    it('should replace VERSION', inject(function(interpolateFilter) {
+    it('should replace VERSION', inject(interpolateFilter => {
       expect(interpolateFilter('before %VERSION% after')).toEqual('before TEST_VER after');
     }));
   });
