@@ -1,0 +1,18 @@
+{
+  "name": "typescript-todomvc",
+  "version": "1.0.0",
+  "description": "TodoMVC/TypeScript demo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Microsoft/TypeScriptSamples.git"
+  },
+  "dependencies": {
+    "http-server": "^0.11.1"
+  },
+  "devDependencies": {
+    "typescript": "^3.0.0"
+  },
+  "scripts": {
+    "start": "tsc && http-server -o"
+  }
+}
