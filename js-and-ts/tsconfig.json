@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "outDir": "./built",
+    "sourceMap": true,
+    "allowJs": true,
+    "target": "es6"
+  },
+  "include": [
+      "./**/*"
+  ]
+}
