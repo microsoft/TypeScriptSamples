@@ -1,0 +1,8 @@
+# compiled and bundled source
+dist
+
+# Node modules
+node_modules
+
+# type definitions
+typings

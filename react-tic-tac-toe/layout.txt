@@ -1,0 +1,18 @@
+TicTacToe /
+    |---- css/			        // css style sheets
+    |---- dist/			        // folder for typescript-compiled and webpack-bundled js files 
+    |---- node_modules/		    // dependent node modules
+    |---- src/			        // .ts and .tsx source files
+        |---- app.tsx		    // the App React component
+        |---- board.tsx		    // the TicTacToe Board React component
+        |---- constants.ts		// some shared constants and types
+        |---- gameStateBar.tsx	// GameStatusBar React component
+        |---- restartBtn.tsx	// RestartBtn React component
+    |---- typings/			    // type definition .d.ts files
+    |---- index.html		    // web page for our app
+    |---- layout.html		    // project structure
+    |---- package.json		    // node package configuration file 
+    |---- README.md		        // RAEDME file 
+    |---- tsconfig.json		    // typescript configuration file
+    |---- typings.json		    // typings configuration file
+    |---- webpack.config.js	    // webpack configuration file

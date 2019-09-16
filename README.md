@@ -42,6 +42,8 @@ To compile each sample, `cd` into the directory and use the `tsc` command to com
 
 ##### [Raytracer](raytracer/README.md)
 
+##### [React Tic-Tac-Toe](react-tic-tac-toe/README.md)
+
 ##### [Simple](simple/README.md)
 
 ##### [SystemJS](systemjs/README.md)
