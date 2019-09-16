@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<widget id="vs.mdd.taco.react" version="0.0.1" windows-packageVersion="1.1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>React Cordova Demo</name>
+  <description>A blank project that uses Apache Cordova to help you build an app that targets multiple mobile platforms: Android, iOS, Windows, and Windows Phone.</description>
+  <author email="dev@cordova.apache.org" href="http://cordova.io">Apache Cordova Team</author>
+  <content src="index.html" />
+  <access origin="*" />
+  <preference name="SplashScreen" value="screen" />
+  <preference name="windows-target-version" value="10.0" />
+  <preference name="windows-phone-target-version" value="8.1" />
+  <plugin name="cordova-plugin-whitelist" spec="1" />
+  <allow-intent href="http://*/*" />
+  <allow-intent href="https://*/*" />
+  <allow-intent href="tel:*" />
+  <allow-intent href="sms:*" />
+  <allow-intent href="mailto:*" />
+  <allow-intent href="geo:*" />
+  <allow-navigation href="http://m.imgur.com" />
+  <platform name="android">
+    <allow-intent href="market:*" />
+  </platform>
+  <platform name="ios">
+    <allow-intent href="itms:*" />
+    <allow-intent href="itms-apps:*" />
+  </platform>
+</widget>

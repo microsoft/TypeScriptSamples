@@ -1,0 +1,14 @@
+typings
+node_modules
+
+
+plugins/
+platforms/
+.vs/
+.vscode/
+bin/
+bld/
+app/*.js
+app/*.map
+www/scripts/
+*.user
