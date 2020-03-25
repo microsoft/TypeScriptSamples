@@ -16,6 +16,6 @@ function getRandomGreeting() {
         whomToGreet: 'world!',
     };
 
-    ReactDOM.render(<Greetifier {...props} greeting={getRandomGreeting} />, $('#output').get(0));
+    ReactDOM.render(<Greetifier {...props} greeting={getRandomGreeting} />, document.getElementById("output"));
 })();
 
